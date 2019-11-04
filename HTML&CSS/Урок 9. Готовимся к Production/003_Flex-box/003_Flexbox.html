@@ -1,0 +1,38 @@
+<!-- Одним из основных понятий в fleхbox являются оси.
+
+Главной осью flex-контейнера является направление, в соответствии с которым располагаются все его дочерние элементы.
+
+Поперечной осью называется направление, перпендикулярное главной оси.
+
+Главная ось в ltr локали по умолчанию располагается слева направо. Поперечная – сверху вниз. Направление главной оси flex-контейнера можно задавать, используя базовое css свойство flex-direction.
+
+Доступные значения flex-direction:
+
+1. row (значение по умолчанию) : слева направо (в rtl справа налево)
+2. row-reverse: справа налево (в rtl слева направо)
+3. column: сверху вниз
+4. column-reverse: снизу вверх
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>002_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+		  display: flex;
+		  flex-direction: row-reverse;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div>
+			<img src="https://html5.by/wp-content/uploads/2014/02/flexbox-main-column-300x300.png">
+		</div>
+		<div>
+			<img src="https://html5.by/wp-content/uploads/2014/02/flexbox-main-row-300x300.png">
+		</div>
+	</div>
+</body>
+</html>

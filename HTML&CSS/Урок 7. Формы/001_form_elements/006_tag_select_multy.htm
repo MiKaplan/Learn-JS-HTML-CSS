@@ -1,0 +1,43 @@
+<!--
+    Атрибут multiple="multiple" позволяет выбрать несколько вариантов из выпадающего списка.
+-->
+
+<html>
+<head>
+    <title>Ìíîãîçíà÷íûé ñïèñîê</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Mickey" />
+        <br />
+        Enter your second name:
+        <input type="text" name="sec_name" value="Mouse" />
+        <br />
+        Enter your password:
+        <input type="password" name="password" />
+        <br />
+
+        Your favorite film:
+                <select multiple="multiple" name="select">
+                    <option value="film001">2 smokin guns</option>
+                    <option value="film002">Bad Boys</option>
+                    <option value="film003">Revenge</option>
+                    <option value="film004">Crow</option>
+                    <option value="film005">Dead Man Walkin</option>
+                    <option value="film006">Wrong thing</option>
+                </select>
+
+        <br />
+        <input type="submit" name="submit" value="Enter" />
+        <br />
+        <input type="reset" name="reset" value="Reset" />
+    </form>
+</body>
+</html>

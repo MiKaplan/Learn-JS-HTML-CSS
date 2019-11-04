@@ -1,0 +1,44 @@
+<!-- Задает стилевой класс, который позволяет связать определенный тег со стилевым оформлением. В значении допускается указывать сразу несколько классов, разделяя их между собой пробелом.
+
+.class-name
+    {
+        property1: value;
+        property2: value;
+    } -->
+<html>
+<head>
+
+    <title>Class style</title>
+
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        p {
+            font-size: 36px;
+        }
+        div {
+            background: aqua;
+            color: green;
+        }
+        .class1 {
+            font-size: 20px;
+            color: red;
+            background-color: #000;
+        }
+    </style>
+
+</head>
+<body>
+    <!--Добавление класса в <p> -->
+    <p class="class1">Paragraph with class</p>
+
+    <p>Paragraph</p>
+
+    <!-- Добавление класса в <div> -->
+    <div class="class1">
+        <p>Div with class</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="main-form">
+      <div id="head">
+        <label>
+          <span>Contact Manager</span>
+          <select name="options">
+            <option value="more-actions">More Actions</option>
+            <option value="exaple1">Exapmle 1</option>
+            <option value="exaple2">Exapmle 2</option>
+            <option value="exaple3">Exapmle 3</option>
+            <option value="exaple4">Exapmle 4</option>
+          </select>
+        </label>
+      </div>
+      <div id="personal-data">
+          <div id="left">
+            <label>
+              <span>First Name</span>
+              <input type="text" />
+            </label>
+            <label>
+              <span>Second Name</span>
+              <input type="text" />
+            </label>
+            <label class="textarea-label">
+              <span>Address</span>
+              <textarea name="address"></textarea>
+            </label>
+            <label>
+              <span>City</span>
+              <input type="text" />
+            </label>
+            <label>
+              <span>State</span>
+              <select name="state">
+                <option value="select">-Select-</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Russian">Russian</option>
+                <option value="USA">USA</option>
+                <option value="England">England</option>
+              </select>
+            </label>
+            <label>
+              <span>Zip</span>
+              <input type="text" />
+            </label>
+            <label>
+              <span>Home Phone</span>
+              <input class="little-input" type="number" />
+            </label>
+            <label>
+              <span>Work Phone</span>
+              <input type="number" />
+            </label>
+            <label>
+              <span>Fax Number</span>
+              <input class="little-input" type="number" />
+            </label>
+            <span id="web">Website</span>
+            <label id="link-web">
+              <label id="url">
+                <span>URL</span>
+                <input type="url" />
+              </label>
+              <label id="link">
+                <span>Link Name</span>
+                <input type="text" />
+              </label>
+            </label>
+            <label class="mail-label">
+              <span>Email Address</span>
+              <input type="email" />
+            </label>
+          </div>
+          <div id="right">
+            <div class="div-r">
+              <h4>When is the best time to contact you?</h4>
+              <div class="radio-div">
+                <input type="radio" name="time" value="morning" />
+                <span>Morning</span>
+                <br />
+    
+                <input type="radio" name="time" value="afternoon" />
+                <span>Afternoon</span>
+                <br />
+                <input type="radio" name="time" value="Evening" />
+                <span>Evening</span>
+              </div>
+            </div>
+            <div class="div-r">
+              <h4>When is the best way to contact you?</h4>
+              <div class="radio-div_two">
+                <input type="radio" name="contact" value="Phone" />
+                <span>Phone</span>
+                <br />
+                <input type="radio" name="contact" value="email" />
+                <span>Email</span>
+                <br />
+                <input type="radio" name="contact" value="Fax" />
+                <span>Fax</span>
+              </div>
+            </div>
+            <label>
+                <span>Message</span>
+                <textarea name="textarea"></textarea>
+            </label>
+          </div>
+      </div>
+      <div class="bottoms">
+          <div id="bottoms">
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+          </div>
+      </div>
+    </form>
+  </body>
+</html>

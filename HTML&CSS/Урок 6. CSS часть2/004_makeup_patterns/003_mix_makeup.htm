@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+    <title>Смешанная верстка</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        #header {
+            width: 900px;
+            height: 150px;
+            background-color: Navy;
+        }
+
+        #body {
+            width: 100%;
+            height: 450px;
+            background-color: Silver;
+        }
+
+            #body div:first-child {
+                width: 40%;
+                height: 450px;
+                background-color: Gray;
+                float: left;
+            }
+
+            #body div:last-child {
+                width: 60%;
+                height: 450px;
+                background-color: #ff6a00;
+                float: left;
+            }
+
+        #footer {
+            width: 900px;
+            height: 50px;
+            background-color: Yellow;
+        }
+        @media only screen and (max-width: 400px) {
+            #footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="body">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Praesent id arcu ullamcorper, finibus metus vitae, placerat neque. 
+        Suspendisse volutpat mauris quis sem placerat feugiat. Cras commodo placerat aliquet. 
+        Vestibulum lorem neque, efficitur vel tortor consequat, tristique vehicula urna. 
+        Suspendisse sed diam feugiat, venenatis ligula porta, maximus libero. 
+        Mauris tempus at risus et ornare. Cras vitae volutpat tortor. 
+        Phasellus quis erat feugiat, luctus ipsum quis, ultrices erat. Nullam maximus non ante id iaculis. 
+        Morbi eleifend urna sapien, euismod placerat ipsum volutpat id. 
+        Nam nec facilisis leo, ac luctus velit. Ut et est sit amet nulla sollicitudin dignissim. 
+        
+        </div>
+        <div>
+            Nulla mattis odio libero, nec porttitor massa iaculis egestas. Maecenas mattis mauris eget laoreet sodales. 
+        In accumsan ac tortor at varius. Maecenas iaculis feugiat ligula, a mollis leo convallis sed.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Praesent id arcu ullamcorper, finibus metus vitae, placerat neque. 
+        Suspendisse volutpat mauris quis sem placerat feugiat. Cras commodo placerat aliquet. 
+        Vestibulum lorem neque, efficitur vel tortor consequat, tristique vehicula urna. 
+        Suspendisse sed diam feugiat, venenatis ligula porta, maximus libero. 
+        Mauris tempus at risus et ornare. Cras vitae volutpat tortor. 
+        Phasellus quis erat feugiat, luctus ipsum quis, ultrices erat. Nullam maximus non ante id iaculis. 
+        Morbi eleifend urna sapien, euismod placerat ipsum volutpat id. 
+        Nam nec facilisis leo, ac luctus velit. Ut et est sit amet nulla sollicitudin dignissim. 
+        Nulla mattis odio libero, nec porttitor massa iaculis egestas. Maecenas mattis mauris eget laoreet sodales. 
+        In accumsan ac tortor at varius. Maecenas iaculis feugiat ligula, a mollis leo convallis sed.
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+</html>

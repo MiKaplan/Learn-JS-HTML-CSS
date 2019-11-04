@@ -1,0 +1,27 @@
+﻿<!--
+    document.write(...) — метод, выводящий на страницу переданные ему аргументы (параметры). 
+    Аргументов может быть любое количество, и они могут быть любых типов, 
+    при выводе значения аргументов преобразуются в строки.
+-->
+
+<html>
+<head>
+    <title>Метод "write" объекта document</title>
+
+    <script type="text/javascript">
+
+        var apples_count = 20;
+
+        document.write("Количество яблок - " + apples_count + '. Больше нет яблок.<br/>');
+        apples_count = 10;
+        document.write("Количество яблок - " + apples_count);
+        document.write('<table border="1"><tr><td></td></tr></table>');
+    </script> 
+
+</head>
+<body>
+    <button onclick="document.write('hello')">write()</button>
+    <!-- Разметка страници -->
+
+</body>
+</html>

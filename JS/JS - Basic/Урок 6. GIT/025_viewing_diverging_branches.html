@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">25. Просмотр отличающихся веток</h1>
+<h3>Цели</h3>
+
+<ul><li>Научиться просматривать отличающиеся ветки в репозитории.</li></ul>
+
+<h2><em>01</em> Просмотрите текущие ветки</h2>
+
+<p>Теперь у нас в репозитории есть две отличающиеся ветки. Используйте следующую лог-команду для просмотра веток и их отличий.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git hist --all</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git hist --all
+    * 6c0f848 2011-03-09 | Added README (HEAD, master) [Alexander Shvets]
+    | * 07a2a46 2011-03-09 | Updated index.html (style) [Alexander Shvets]
+    | * 649d26c 2011-03-09 | Hello uses style.css [Alexander Shvets]
+    | * 1f3cbd2 2011-03-09 | Added css stylesheet [Alexander Shvets]
+    |/
+    * 8029c07 2011-03-09 | Added index.html. [Alexander Shvets]
+    * 567948a 2011-03-09 | Moved hello.html to lib [Alexander Shvets]
+    * 6a78635 2011-03-09 | Add an author/email comment [Alexander Shvets]
+    * fa3c141 2011-03-09 | Added HTML header (v1) [Alexander Shvets]
+    * 8c32287 2011-03-09 | Added standard HTML page tags (v1-beta) [Alexander Shvets]
+    * 43628f7 2011-03-09 | Added h1 tag [Alexander Shvets]
+    * 911e8c9 2011-03-09 | First Commit [Alexander Shvets]</pre>
+
+<p>Это наша первая возможность увидеть в действии <code>--graph</code> в <code>git hist</code>. Добавление опции <code>--graph</code> в <code>git log</code> вызывает построение дерева коммитов с помощью простых <span>ASCII</span> символов. Мы видим обе ветки (style и master), и то, что ветка master является текущей <span>HEAD</span>. Общим предшественником обеих веток является коммит «Added index.html».</p>
+
+<p>Метка <code>--all</code> гарантированно означает, что мы видим все ветки. По умолчанию показывается только текущая ветка.</p>
+
+</body>
+</html>

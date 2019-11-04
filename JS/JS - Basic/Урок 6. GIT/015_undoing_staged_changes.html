@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">15. Отмена проиндексированных изменений (перед коммитом)</h1>
+<h3>Цели</h3>
+
+<ul><li>Научиться отменять изменения, которые были проиндексированы</li></ul>
+
+<h2><em>01</em> Измените файл и проиндексируйте изменения</h2>
+
+<p>Внесите изменение в файл <code>hello.html</code> в виде нежелательного комментария</p>
+
+<h4>Файл: <em>hello.html</em></h4>
+
+<pre class="file">
+    &lt;html&gt;
+      &lt;head&gt;
+        <strong>&lt;!-- This is an unwanted but staged comment --&gt;</strong>
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</pre>
+
+<p>Проиндексируйте это изменение.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git add hello.html</pre>
+
+<h2><em>02</em> Проверьте состояние</h2>
+
+<p>Проверьте состояние нежелательного изменения.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git status</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use "git reset HEAD &lt;file&gt;..." to unstage)
+    #
+    #   modified:   hello.html
+    #</pre>
+
+<p>Состояние показывает, что изменение было проиндексировано и готово к коммиту.</p>
+
+<h2><em>03</em> Выполните сброс буферной зоны</h2>
+
+<p>К счастью, вывод состояния показывает нам именно то, что мы должны сделать для отмены индексации изменения.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git reset HEAD hello.html</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git reset HEAD hello.html
+    Unstaged changes after reset:
+    M   hello.html</pre>
+
+<p>Команда <code>reset</code> сбрасывает буферную зону к <span>HEAD</span>. Это очищает буферную зону от изменений, которые мы только что проиндексировали.</p>
+
+<p>Команда <code>reset</code> (по умолчанию) не изменяет рабочий каталог. Поэтому рабочий каталог все еще содержит нежелательный комментарий. Мы можем использовать команду <code>checkout</code> из предыдущего урока, чтобы удалить нежелательные изменения в рабочем каталоге.</p>
+
+<h2><em>04</em> Переключитесь на версию коммита</h2>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git checkout hello.html
+    git status</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git status
+    # On branch master
+    nothing to commit (working directory clean)</pre>
+
+<p>Наш рабочий каталог опять чист.</p>
+
+</body>
+</html>

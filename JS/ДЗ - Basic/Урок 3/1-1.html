@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      
+      function enter() {
+        var num1 = prompt("Enter first number");
+        var num2 = prompt("Enter second number");
+        var sign = prompt("enter +, -, *, /");
+
+        if (
+          num1 == null ||
+          num2 == null ||
+          sign == null ||
+          !num1.match(/^\d+$/) ||
+          !num2.match(/^\d+$/) ||
+          !sign.match(/^[-,+,*,/]$/)
+        ) {
+          alert("Error");
+          return enter();
+        }
+        function calc(a, b, c) {
+        var result = eval(a+c+b);
+        alert(result);
+      }
+      calc(num1, num2, sign);
+      }
+
+      enter();
+
+      
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

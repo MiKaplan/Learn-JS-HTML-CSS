@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>008_LESS</title>
+	<style type="text/css">
+		h1, h2 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+	</style>
+</head>
+<body>
+	<h1>Специальные параметры</h1>
+	<h2>@arguments</h2>
+	<p>
+		Переменная @arguments представляет собой синоним для всех переданных в примесь значений при её вызове. Такое поведение может быть полезно при использовании примеси с большим количеством переменных, предназначающихся для одного свойства.
+	</p>
+	<pre>
+		<code>
+			.box-shadow(@x: 0, @y: 0, @blur: 1px, @color: #333) {
+			  -webkit-box-shadow: @arguments;
+			     -moz-box-shadow: @arguments;
+			          box-shadow: @arguments;
+			}
+
+			.big-block {
+			  .box-shadow(2px, 5px);
+			}
+		</code>
+	</pre>
+	<h2>@rest</h2>
+	<p>
+		Переменная @arguments представляет собой синоним для всех переданных в примесь значений при её вызове. Такое поведение может быть полезно при использовании примеси с большим количеством переменных, предназначающихся для одного свойства.
+	</p>
+	<pre>
+		<code>
+			.mixin(@width: 152px, @height: 20px, @rest...)  {
+			  width: @width;
+			  height: @height;
+			  border: @rest;
+			}
+
+			.class {
+			  .mixin(304px, 40px, 2px, solid, #ddd);
+			}
+		</code>
+	</pre>
+</body>
+</html>

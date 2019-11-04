@@ -1,0 +1,39 @@
+<!--
+    Селектор в левой части правила определяет на какие части документа распространяется правило. Блок объявлений располагается в правой части правила. 
+    
+    селектор {
+        свойство: значение;
+        свойство: значение;
+        свойство: значение;
+    }        
+-->
+
+<html>
+<head>
+
+    <title>Тег style</title>
+
+    <style type="text/css">
+        p {
+            font-family: Segoe UI;
+            font-size: 18pt;
+            background-color: Red;
+        }
+        div {
+            background-color: yellow;
+            color: Red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <div>
+        <p>
+            Paragraph in DIV
+        </p>
+    </div>
+</body>
+</html>

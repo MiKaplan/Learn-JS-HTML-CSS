@@ -1,0 +1,49 @@
+<!-- 
+align-items – выравнивание по поперечной оси.
+Css свойство align-items определяет то, как будут выровнены элементы вдоль поперечной оси.
+
+Доступные значения align-items:
+
+flex-start: блоки прижаты к началу поперечной оси
+flex-end: блоки прижаты к концу поперечной оси
+center: блоки располагаются в центре поперечной оси
+baseline: блоки выровнены по их baseline
+stretch (значение по умолчанию) : блоки растянуты, занимая все доступное место по поперечной оси, при этом все же учитываются min-width/max-width, если таковые заданы.
+
+СSS свойства flex-direction, justify-content, align-items должны применяться непосредственно к flex-контейнеру, а не к его дочерним элементам.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>005_Flexbox</title>
+	<style type="text/css">
+	.my-flex-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.my-flex-container > div {
+		border: 1px solid #000;
+		width: 100px;
+		min-height: 50px;
+	}
+</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+    Тег <label> устанавливает связь между определенной меткой, в качестве которой обычно выступает текст, и элементом формы (<input>, <select>, <textarea>). Такая связь необходима, чтобы изменять значения элементов формы при нажатии курсором мыши на текст. Кроме того, с помощью <label> можно устанавливать горячие клавиши на клавиатуре и переходить на активный элемент подобно ссылкам.
+
+    Существует два способа связывания объекта и метки. Первый заключается в использовании идентификатора id внутри элемента формы и указании его имени в качестве атрибута for тега <label>. При втором способе элемент формы помещается внутрь контейнера <label>.
+-->
+
+<style type="text/css">
+    body {
+        font-family: 'Segoe UI';
+    }
+
+    label {
+        width: 200px;
+        float: left;
+    }
+</style>
+<html>
+<head>
+    <title>Label</title>
+</head>
+<body>
+    <form>
+        <br />
+        <label for="first_name" accesskey="k">Enter your first name:</label>
+        <input type="text" id="first_name" name="first_name" value="Ivan" />
+        <br>
+        <label for="sec_name" accesskey="s">Enter your second name:</label>
+        <input type="text" id="sec_name" name="sec_name" value="Ivanov" />
+        <br />
+        <label for="psw" accesskey="p">Enter your password:</label>
+        <input type="password" id="psw" name="psw" />
+        <br />
+        
+        <label accesskey="p">Enter your password:</label>
+         <select name="select" >
+                    <option value="film001"></option>
+                    <option value="Bad Boys">Bad Boys</option>
+                    <option value="film003" >Revenge</option>
+                    <option value="film004" >Crow</option>
+                    <option value="film005">Dead Man Walkin</option>
+                    <option value="film006">Wrong thing</option>
+                </select>
+<br />
+        <input type="reset" name="reset" value="Reset" /><input type="submit" name="submit" value="Enter" />
+        <label for="sec_name" accesskey="s">Enter your second name:</label>
+    </form>
+</body>
+</html>

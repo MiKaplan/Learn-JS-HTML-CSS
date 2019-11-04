@@ -1,0 +1,64 @@
+﻿<!--  
+    :only-child — применяется к дочернему элементу, только если он единственный у родителя.
+
+    :only-of-type — применяется к дочернему элементу указанного типа, только если он единственный у родителя.
+
+    :first-of-type — задает правила стилей для первого элемента данного типа в списке дочерних элементов своего родителя.
+-->
+
+<html>
+<head>
+    <title>nth-of-type</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            margin: auto;
+            width: 800px;
+        }
+
+        div {
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        p:only-child {
+            background-color: yellow !important;
+        }
+
+        p:only-of-type {
+            background-color: green;
+        }
+
+        ul:first-of-type li:last-child {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>only Paragraph in div</p>
+    </div>
+
+    <div>
+        <p>Paragraph in div</p>
+        <span>Span in div</span>
+        <div>Div in div</div>
+    </div>
+
+
+    <div>
+        <p>My paragraph here. </p>
+        <ul>
+            <li>List Item 1 </li>
+            <li>List Item 2 </li>
+        </ul>
+
+        <ul>
+            <li>List Item 3 </li>
+            <li>List Item 4 </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+

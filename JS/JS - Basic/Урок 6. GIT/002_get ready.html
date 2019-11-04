@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px;
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>2. Подготовка</h1>
+    <h3>Цели</h3>
+    <ul><li>Полная готовность к работе с Git.</li></ul>
+    <h2><em>01</em> Установка имени и электронной почты</h2>
+    <p>Если вы никогда ранее не использовали git, для начала вам необходимо осуществить установку. Выполните следующие команды, чтобы git узнал ваше имя и электронную почту.</p>
+    <h4>Выполнить:</h4>
+<pre>
+    git config --global user.name "Your Name"
+    git config --global user.email "your_email@whatever.com"</pre>
+    <h2><em>02</em> Параметры установки окончаний строк</h2>
+    <p>Также, для пользователей Unix/Mac:</p>
+    <h4>Выполнить:</h4>
+<pre>
+    git config --global core.autocrlf input
+    git config --global core.safecrlf true</pre>
+    <p>Для пользователей Windows:</p>
+    <h4>Выполнить:</h4>
+<pre>
+    git config --global core.autocrlf true
+    git config --global core.safecrlf true</pre>
+    <h2><em>03</em> Установка отображения unicode</h2>
+    <p>По умолчанию, git будет печатать не-<a href="https://unicode-table.com/ru/#basic-latin">ASCII символов</a> в именах файлов в виде восьмеричных последовательностей <code>\nnn</code>. Что бы избежать нечитаемых строк, установите соответствующий флаг.</p>
+
+    <pre>
+    git config --global core.quotepath off</pre>
+</body>
+</html>

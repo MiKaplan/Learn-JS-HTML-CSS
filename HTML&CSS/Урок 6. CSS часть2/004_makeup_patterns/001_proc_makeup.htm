@@ -1,0 +1,70 @@
+﻿<!--
+    Процентная (резиновая) верстка получается за счет того, что единицами измерения при верстке дизайна в большинстве своем выступают проценты,
+    что позволяет растянуть макет на всю ширину окна браузера.
+-->
+
+<html>
+<head>
+    <title>Процентная верстка</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #header {
+            width: 100%;
+            height: 30%;
+            background-color: Navy;
+        }
+
+        #body {
+            width: 100%;
+            height: 55%;
+            background-color: Silver;
+        }
+
+        #body div:first-child {
+            width: 30%;
+            height: 100%;
+            background-color: Gray;
+            float: left;
+        }
+
+        #body div:last-child {
+            width: 70%;
+            height: 100%;
+            background-color: #f00;
+            float: left;
+        }
+
+        #footer {
+            width: 100%;
+            height: 15%;
+            background-color: Yellow;
+        }
+        @media screen and (max-width: 320px) {
+            #header{
+                background-color: #333;
+            }
+            #body div:first-child, 
+            #body div:last-child {
+                height: 50%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="body">
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+</html>

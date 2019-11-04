@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1>7. Индексация и коммит</h1>
+<p>Отдельный шаг индексации в git позволяет вам продолжать вносить изменения в рабочий каталог, а затем, в момент, когда вы захотите взаимодействовать с версионным контролем, git позволит записать изменения в малых коммитах, которые фиксируют то, что вы сделали.</p>
+
+<p>Предположим, что вы отредактировали три файла (<code>a.html</code>, <code>b.html</code>, и <code>c.html</code>). Теперь вы хотите закоммитить все изменения, при этом чтобы изменения в <code>a.html</code> и <code>b.html</code> были одним коммитом, в то время как изменения в <code>c.html</code> логически не связаны с первыми двумя файлами и должны идти отдельным коммитом.</p>
+
+<p>В теории, вы можете сделать следующее:</p>
+
+<pre>
+    git add a.html
+    git add b.html
+    git commit -m "Changes for a and b"</pre>
+
+<pre>
+    git add c.html
+    git commit -m "Unrelated change to c"</pre>
+
+<p>Разделяя индексацию и коммит, вы имеете возможность с легкостью настроить, что идет в какой коммит.</p>
+</body>
+</html>

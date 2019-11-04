@@ -1,0 +1,51 @@
+<!-- 
+flex-shrink – фактор “сжимаемости” отдельно взятого flex-блока
+Определяет, насколько flex-блок будет уменьшаться относительно соседних эдементов внутри flex-контейнера в случае недостатка свободного места. По умолчанию равен 1.
+
+flex – короткая запись для свойств flex-grow, flex-shrink и flex-basis
+flex: none | [ <'flex-grow'> || <'flex-shrink'>? || <'flex-basis'> ]
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>008_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			height: 60vh;
+			display: flex;
+			flex-wrap: wrap;	
+			justify-content: space-around;
+		}
+		.my-flex-block {
+			text-align: center;
+			border: 1px solid #000;
+			flex-basis: 400px
+		}
+		.my-flex-block:nth-child(odd) {
+			flex-grow:12;
+			flex-shrink:1;
+		}
+		.my-flex-block:nth-child(even) {
+			flex-shrink:10;
+		}
+		/*.my-flex-block {
+			flex: 12 4 400px;
+			text-align: center;
+			border: 1px solid #000;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block">item1</div>
+		<div class="my-flex-block">item2</div>
+		<div class="my-flex-block">item3</div>
+		<div class="my-flex-block">item4</div>
+		<div class="my-flex-block">item5</div>
+		<div class="my-flex-block">item6</div>
+		<div class="my-flex-block">item7</div>
+		<div class="my-flex-block">item8</div>
+	</div>
+</body>
+</html>

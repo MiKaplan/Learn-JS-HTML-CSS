@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>006_LESS</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+	</style>
+</head>
+<body>
+	<h1>Имя переменной</h1>
+	<pre>
+		<code>
+			// Дефис
+			@grid-breakpoint-xsmall: 540px;
+			@navbar-item-color: #777;
+			@pagination-border-color: #ddd;
+
+			// Нижнее подчёркивание (under_score)
+			@hamburger_border_radius: @border_radius;
+			@line_height_computed: 24px;
+			@font_awesome_path: "../vendor/font-awesome/font";
+
+			// Верблюжья нотация (camelCase)
+			@labelFontSize: 0.8em;
+			@commentBackground: #FFFFFF;
+			@authorHoverColor: @primaryColorHover;
+		</code>
+	</pre>
+</body>
+</html>

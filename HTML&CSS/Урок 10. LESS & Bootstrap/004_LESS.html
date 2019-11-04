@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>004_LESS</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+	</style>
+</head>
+<body>
+	<h1>@import</h1>
+	<p>CSS директива @import позволяет импортировать стили из других таблиц. Проще говоря, можно разбить одну большую таблицу стилей на несколько маленьких. Делается это следующим образом:
+		<pre>
+		 	<code>
+		 		@import url("имя файла");
+				@import "имя файла";
+		 	</code>
+		</pre>
+	</p>
+	<p>
+	Самым важным минусом выступает тот факт, что такие подключения должны предшествовать другим стилям в таблице, где подключается дополнительный файл. То есть сделать так, как написано в коде ниже нельзя:
+	</p>
+	<pre>
+		<code>
+			.class {
+			  background-color: #fff;
+			}
+			@import "имя файла";
+		</code>
+	</pre>
+	<p>
+		Разрешено делать только так:
+	</p>
+	<pre>
+		<code>
+			@import "имя файла";
+			.class {
+			  background-color: #fff;
+			}
+		</code>
+	</pre>
+	<p>
+		Причём имя файла должно быть с расширением .css.
+	</p>
+</body>
+</html>

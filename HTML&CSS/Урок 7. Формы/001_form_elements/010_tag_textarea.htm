@@ -1,0 +1,28 @@
+<!--
+    Поле <textarea> представляет собой элемент формы для создания области, в которую можно вводить несколько строк текста. В отличие от тега <input> в текстовом поле допустимо делать переносы строк, они сохраняются при отправке данных на сервер.
+-->
+
+<html>
+<head>
+    <title>Òåã textarea</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your name:
+        <input type="text" name="login" value="" />
+        <br />
+        <br />
+        Enter your message: <br />
+        <br />
+        <textarea cols="40" rows="10" name="textarea" style="resize: none" ></textarea>
+        <br />
+        <input type="submit" name="submit" value="Enter"/>
+    </form>
+</body>
+</html>

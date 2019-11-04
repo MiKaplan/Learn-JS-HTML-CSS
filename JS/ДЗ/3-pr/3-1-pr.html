@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rating = prompt('Введите свой балл');
+        if(rating < 0){
+            alert('Вы ввели неправильный балл');
+        }
+        else if (rating < 60) {
+            alert('Ваш балл - 2');
+        }
+        else if (rating < 75) {
+            alert('Ваш балл - 3');
+        }
+        else if (rating < 95) {
+            alert('Ваш балл - 4');
+        }
+        else if (rating <= 100) {
+            alert('Ваш балл - 5');
+        }
+        else {
+            alert('Вы ввели неправильный балл');
+        }
+    </script>
+</body>
+
+</html>

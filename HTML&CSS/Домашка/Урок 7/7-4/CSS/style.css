@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    color: antiquewhite;
+}
+#main-form {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+
+}
+div {
+    width: 100%;
+    background: rgb(29, 29, 29);
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, .7);
+    height: 50px;
+}
+div:first-child,
+input,
+textarea {
+    background: rgb(41, 41, 41);
+}
+div:last-child {
+    height: 220px;
+}
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 10px; 
+}
+label {
+    padding-top: 10px;
+    height: 50px;
+}
+span {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+input {
+    box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    
+}
+textarea {
+    width: 350px;
+    height: 150px;
+    resize: none;
+}
+textarea,
+input {
+    border: 1px solid black;
+    margin-top: 10px;
+    color: azure;
+    outline: none;
+}
+input[type="submit"] {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    width: 100px;
+    background: red;
+}
+#message {
+    vertical-align: top;
+    margin-top: 10px;
+}

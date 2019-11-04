@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      function game() {
+        var yourChoise = +prompt(
+          "Choose stone (Enter '1') / scissors (Enter '2') / paper (Enter '3')"
+        );
+        var computerChoice = Math.random();
+        var yourChoose = null;
+        var compChoose = null;
+        switch (yourChoise) {
+          case 1:
+            yourChoose = "stone";
+            break;
+          case 2:
+            yourChoose = "scissors";
+            break;
+          case 3:
+            yourChoose = "paper";
+            break;
+          default:
+            alert("Error");
+            return game();
+            break;
+        }
+        if (computerChoice >= 0 && computerChoice <= 0.33) {
+          compChoose = "stone";
+        } else if (computerChoice >= 0.34 && computerChoice <= 0.66) {
+          compChoose = "scissors";
+        } else if (computerChoice >= 0.67 && computerChoice <= 1) {
+          compChoose = "paper";
+        }
+
+        if (yourChoose == compChoose) {
+          alert("Draw");
+          return game();
+        } else if (yourChoose == "stone" && compChoose == "scissors") {
+          alert("Computer choose " + compChoose + ". You win!");
+          repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        } else if (yourChoose == "stone" && compChoose == "paper") {
+          alert("Computer choose " + compChoose + ". You lose!");
+          var repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        } else if (yourChoose == "paper" && compChoose == "scissors") {
+          alert("Computer choose " + compChoose + ". You lose!");
+          repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        } else if (yourChoose == "paper" && compChoose == "stone") {
+          alert("Computer choose " + compChoose + ". You win!");
+          repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        } else if (yourChoose == "scissors" && compChoose == "paper") {
+          alert("Computer choose " + compChoose + ". You win!");
+          repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        } else if (yourChoose == "scissors" && compChoose == "stone") {
+          alert("Computer choose " + compChoose + ". You lose!");
+          repeat = confirm("Repeat?");
+          if (repeat) {
+            return game();
+          }
+        }
+      }
+
+      game();
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

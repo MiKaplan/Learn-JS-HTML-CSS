@@ -1,0 +1,176 @@
+﻿<!--  
+    Псевдокласс :hover не обязательно должен применяться к ссылкам, его можно добавлять и к другим элементам документа.
+-->
+
+<html>
+<head>
+    <title>hover</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px gray;
+            font-family: 'Segoe UI';
+            margin: auto;
+            width: 750px;
+        }
+        thead {
+            background: white;
+            text-align: center;
+        }
+
+        thead td {
+            border: 0px;
+        }
+
+        tfoot td {
+            background: white;
+            text-align: center;
+            border: none;
+        }
+        col.col1 {
+            background-color: #efefef;
+        }
+        col.col2-4 {
+            background-color: #f7f7f7;
+            width: 170px;
+        }
+        tr.headerRow {
+            background-color: white;
+        }
+        tbody tr:hover {
+            background-color: gray;
+            color: white;
+        }
+        tbody tr.headerRow:hover {
+            background-color: white;
+            color: red;
+            /* opacity: .5; */
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+
+        <caption>
+            <h2>Сравнение моделей</h2>
+        </caption>
+
+        <thead>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <img src="laptops/lenovo.jpg" alt="Alternate Text" /><br />
+                    Lenovo IdeaPad S110 (59-366438)
+                </td>
+                <td>
+                    <img src="laptops/asus.jpg" alt="Alternate Text" /><br />
+                    ASUS X501U (X501U-XX058D)
+                </td>
+                <td>
+                    <img src="laptops/hp.jpg" alt="Alternate Text" /><br />
+                    HP 15-F009 (S-J2V78UA)
+                </td>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan="4"><small>hotline.ua</small></td>
+            </tr>
+        </tfoot>
+
+        <colgroup>
+            <col class="col1">
+            <col class="col2-4" span="3">
+        </colgroup>
+
+        <tbody>
+            <tr class="headerRow">
+                <td colspan="4">Основные характеристики</td>
+            </tr>
+
+            <tr>
+                <td>Класс</td>
+                <td>нетбук</td>
+                <td>ноутбук</td>
+                <td>ноутбук</td>
+            </tr>
+
+            <tr>
+                <td>Конструкция</td>
+                <td>классический</td>
+                <td>классический</td>
+                <td>классический</td>
+            </tr>
+
+            <tr class="headerRow">
+                <td colspan="4">Характеристики экрана</td>
+            </tr>
+
+            <tr>
+                <td>Диагональ</td>
+                <td>10,1</td>
+                <td>15,6</td>
+                <td>15,6</td>
+            </tr>
+
+            <tr>
+                <td>Тип матрицы</td>
+                <td>TN+film</td>
+                <td>TN+film</td>
+                <td>TN+film</td>
+            </tr>
+
+            <tr>
+                <td>Разрешение экрана</td>
+                <td>1024х600</td>
+                <td>1366x768</td>
+                <td>1366x768</td>
+            </tr>
+
+            <tr class="headerRow">
+                <td colspan="4">Процессор</td>
+            </tr>
+
+            <tr>
+                <td>Тип процессора</td>
+                <td>Intel Atom N2600</td>
+                <td>AMD E2-1800</td>
+                <td>AMD E1-2100</td>
+            </tr>
+
+            <tr>
+                <td>Частота</td>
+                <td>1,6</td>
+                <td>1,7</td>
+                <td>1</td>
+            </tr>
+
+            <tr class="headerRow">
+                <td colspan="4">Оснащение</td>
+            </tr>
+
+            <tr>
+                <td>Оперативная память</td>
+                <td>2</td>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>Жеский диск</td>
+                <td>320</td>
+                <td>500</td>
+                <td>500</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,23 @@
+﻿<!--
+    Атрибуты width и height контролируют размеры изображения.
+    По умолчанию изображение принимает свои действительные размеры. 
+    Если один из них отсутствует, то изображение растянется пропорционально второму.
+    Если в результате изменения изображения пропорции будут нарушены, то изображение может быть отображено некорректно.
+-->
+
+<html>
+<head>
+    <title>Атрибуты width и height</title>
+</head>
+<body>
+
+    <p>
+        <img src="Images/laptop.png" alt="laptop" title="laptop" width="400" />
+        <img src="Images/laptop.png" alt="laptop" title="laptop" width="400" height="400" />
+        <img src="Images/laptop.png" alt="laptop" title="laptop" width="400" height="100" />
+    </p>
+
+    <h4>Изображение с атрибутами Alt и Title , которое по каким-то причинам не загрузилось</h4>
+    <img src="images/unknown.png" alt="на этом месте могла быть Ваша реклама" title="laptop" width="500" height="200" /><br />
+</body>
+</html>

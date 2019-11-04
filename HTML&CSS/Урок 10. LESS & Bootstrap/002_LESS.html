@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>002_LESS</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+	</style>
+</head>
+<body>
+	<h1>&</h1>
+	<p>
+		Наиболее часто, символ & применяется для добавления псевдоклассов к селекторам. Например, с помощью него можно добавить эффект при наведении, используя псевдокласс :hover.
+		<pre>
+			<code>
+				a {
+				  color: #777;
+				  text-decoration: none;
+
+				  &:hover {
+				    color: #a31515;
+				  }
+				}
+			</code>
+		</pre>
+</p>
+</body>
+</html>

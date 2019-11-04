@@ -1,0 +1,66 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">6. Индексация изменений</h1>
+<h3>Цели</h3>
+
+<ul><li>Научиться индексировать изменения для последующих коммитов</li></ul>
+
+<h2><em>01</em> Добавьте изменения</h2>
+
+<p>Теперь дайте команду git проиндексировать изменения. Проверьте состояние</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git add hello.html
+    git status</pre>
+
+<p>Вы увидите…</p>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git add hello.html
+    $ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use "git reset HEAD &lt;file&gt;..." to unstage)
+    #
+    #   modified:   hello.html
+    #</pre>
+
+<p>Изменения файла <code>hello.html</code> были проиндексированы. Это означает, что git теперь знает об изменении, но изменение пока не <em>перманентно</em> (читай, <em>навсегда</em>) записано в репозиторий. Следующий коммит будет включать в себя проиндексированные изменения.</p>
+
+<p>Если вы решили, что <em>не</em> хотите коммитить изменения, команда состояния напомнит вам о том, что с помощью команды <code>git reset</code> можно снять индексацию этих изменений.</p>
+</body>
+</html>

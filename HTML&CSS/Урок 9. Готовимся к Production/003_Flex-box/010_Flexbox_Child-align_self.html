@@ -1,0 +1,43 @@
+<!-- 
+align-self – выравнивание отдельно взятого flex-блока по поперечной оси.
+Делает возможным переопределять свойство flex-контейнера align-items для отдельного flex-блока.
+
+Доступные значения align-self (те же 5 вариантов, что и для align-items)
+
+1. flex-start: flex-блок прижат к началу поперечной оси
+2. flex-end: flex-блок прижат к концу поперечной оси
+3. center: flex-блок располагаются в центре поперечной оси
+4. baseline: flex-блок выравнен по baseline
+5. stretch (значение по умолчанию) : flex-блок растянут, чтобы занять все доступное место по поперечной оси, при этом учитываются min-width/max-width, если таковые заданы.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>008_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			height: 60vh;
+			display: flex;
+			flex-wrap: wrap;	
+			justify-content: space-around;
+		}
+		.my-flex-block {
+			text-align: center;
+			border: 1px solid #000;
+			flex-basis: 20em;
+			align-self: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block">item1</div>
+		<div class="my-flex-block">item2</div>
+		<div class="my-flex-block">item3</div>
+		<div class="my-flex-block">item4</div>
+		<div class="my-flex-block">item5</div>
+		<div class="my-flex-block">item6</div>
+	</div>
+</body>
+</html>

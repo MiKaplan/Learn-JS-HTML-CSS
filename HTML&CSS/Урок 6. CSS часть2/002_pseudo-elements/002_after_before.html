@@ -1,0 +1,100 @@
+﻿<!--  
+    Псевдоэлементы :before и :after позволяют сгенерировать контент вокруг указанного элемента.
+
+    Вставляется содержание перед (:before) или после (:after) какого либо элемента с помощью свойства content.
+
+    Возможные значения свойства content:
+        • "текст" - любой текст или символы;
+        • "\0410" - юникод;
+        • url(путь)- адрес какого либо объекта;
+        • open-quote - открывающая кавычка;
+        • close-quote - закрывающая кавычка;
+        • no-open-quote - отменяет открывающую кавычку;
+        • no-close-quote - отменяет закрывающую кавычку;
+        • inherit - наследует значение элемента родителя;
+        • none - ничего не добавляется;
+        • normal - для псевдоэлементов before и after тоже самое что и none;
+        • counter - показывает значение счетчика, заданного свойством counter-reset;
+        • attr(атрибут тега) - показывает текст, который является значением атрибута того или иного тега указанного в скобках.
+-->
+
+<html>
+<head>
+    <title>after&before</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        li.new:after {
+            content: " - new item!!!";
+            color: red;
+            font-weight: bold;
+        }
+
+        li:hover:before {
+            content: url(img/arrow_right.png);
+        }
+
+        p:after {
+            content: " — " attr(alt);
+            color: red;
+        }
+
+        span.quote:before {
+            content: open-quote;
+        }
+
+        span.quote:after {
+            content: close-quote;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">link1</a></li>
+        <li><a href="#">link2</a></li>
+        <li><a href="#">link3</a></li>
+        <li class="new"><a href="#">link4</a></li>
+        <li><a href="#">link5</a></li>
+    </ul>
+    <p alt="Alt Attribute">Paragraph</p>
+    
+    <p alt=''>
+        <span class="quote">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. 
+    Praesent id arcu ullamcorper, finibus metus vitae, placerat neque. 
+    Suspendisse volutpat mauris quis sem placerat feugiat. Cras commodo placerat aliquet. 
+    Vestibulum lorem neque, efficitur vel tortor consequat, tristique vehicula urna. 
+    Suspendisse sed diam feugiat, venenatis ligula porta, maximus libero. 
+    Mauris tempus at risus et ornare. Cras vitae volutpat tortor. 
+    Phasellus quis erat feugiat, luctus ipsum quis, ultrices erat. Nullam maximus non ante id iaculis. 
+    Morbi eleifend urna sapien, euismod placerat ipsum volutpat id. 
+    <span class="quote">Nam nec facilisis leo, ac luctus velit. Ut et est sit amet nulla sollicitudin dignissim. 
+    Nulla mattis odio libero, nec porttitor massa iaculis egestas</span>. Maecenas mattis mauris eget laoreet sodales. 
+    In accumsan ac tortor at varius. Maecenas iaculis feugiat ligula, a mollis leo convallis sed.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Praesent id arcu ullamcorper, finibus metus vitae, placerat neque. 
+    Suspendisse volutpat mauris quis sem placerat feugiat. Cras commodo placerat aliquet. 
+    Vestibulum lorem neque, efficitur vel tortor consequat, tristique vehicula urna. 
+    Suspendisse sed diam feugiat, venenatis ligula porta, maximus libero. 
+    Mauris tempus at risus et ornare. Cras vitae volutpat tortor. 
+    Phasellus quis erat feugiat, luctus ipsum quis, ultrices erat. Nullam maximus non ante id iaculis. 
+    Morbi eleifend urna sapien, euismod placerat ipsum volutpat id. 
+    Nam nec facilisis leo, ac luctus velit. Ut et est sit amet nulla sollicitudin dignissim. 
+    Nulla mattis odio libero, nec porttitor massa iaculis egestas. Maecenas mattis mauris eget laoreet sodales. 
+    In accumsan ac tortor at varius. Maecenas iaculis feugiat ligula, a mollis leo convallis sed.
+    </p>
+
+
+
+
+</body>
+</html>
+
+

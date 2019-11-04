@@ -1,0 +1,44 @@
+<!-- Идентификатор (называемый также «ID селектор») определяет уникальное имя элемента, которое используется для изменения его стиля и обращения к нему через скрипты.
+
+#id-name
+    {
+        property1: value;
+        property2: value;
+    }
+ -->
+<html>
+<head>
+
+    <title>style</title>
+
+    <style type="text/css">
+        #Id1 {
+            font-family: 'Segoe UI';
+            font-size: 18pt;
+            color: green;
+        }
+        div {
+            background-color: Yellow;
+        }
+        .class {
+            color: red;
+            background-color: #000;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>Paragraph</p>
+
+    <p id="Id1">Paragraph with #id1</p>
+    <p id="P1" class="class">Paragraph with #p1 & .class</p>
+
+    <p id="Id1">Paragraph with #id1</p>
+    <div class="class">
+        Div with .class
+    </div>
+
+
+</body>
+</html>

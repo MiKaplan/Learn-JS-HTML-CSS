@@ -1,0 +1,49 @@
+<!-- 
+flex-wrap
+По умолчанию flex-контейнер всегда будет располагать блоки внутри себя в одну линию. Однако, спецификацией также поддерживается многострочный режим. За многострочность внутри flex-контейнера отвечает CSS свойство flex-wrap.
+
+Доступные значения flex-wrap:
+
+1. nowrap (значение по умолчанию) : блоки расположены в одну линию слева направо (в rtl справа налево)
+2. wrap: блоки расположены в несколько горизонтальных рядов (если не помещаются в один ряд). Они следуют друг за другом слева направо (в rtl справа налево)
+3. wrap-reverse: то-же что и wrap, но блоки располагаются в обратном порядке.
+
++++++++++++++++++++++++++++++
+
+flex-flow – удобное сокращение для flex-direction + flex-wrap
+По сути,flex-flow предоставляет возможность в одном свойстве описать направление главной и многострочность поперечной оси. По умолчанию flex-flow: row nowrap
+
+flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>006_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap-reverse;
+		}
+		/*.my-flex-container{
+			display: flex;
+			flex-flow: row wrap-reverse;
+		}*/
+		.my-flex-block {
+			width: 35%;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block">item1</div>
+		<div class="my-flex-block">item2</div>
+		<div class="my-flex-block">item3</div>
+		<div class="my-flex-block">item4</div>
+		<div class="my-flex-block">item5</div>
+		<div class="my-flex-block">item6</div>
+	</div>
+</body>
+</html>

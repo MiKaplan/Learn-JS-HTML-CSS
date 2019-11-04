@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.first,
+.top,
+.middle,
+.bottom {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    align-items: flex-end;
+}
+.head, 
+.one,
+.two,
+.three {
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+span {
+    line-height: 50px;
+}
+p,
+hr {
+    position: absolute;
+}
+.first_arrow,
+.second_arrow,
+.third_arrow {
+    margin-top: -52px;
+    font-size: 30px;
+}
+.first_arrow {
+    margin-left: -100px;
+}
+.third_arrow {
+    margin-left: 100px;
+}
+hr {
+    border: none;
+    width: 200px;
+    margin-top: -77px;
+    background-color: black;
+    color: black;
+    height: 2px;
+    
+}
+.vertical_line {
+    height: 25px;
+    border-left: 2px solid black;
+    margin-top: -76px;
+}
+.middle > .vertical_line {
+    margin-left: 100px;
+}
+.one:hover ~ .two{
+background: crimson;
+}

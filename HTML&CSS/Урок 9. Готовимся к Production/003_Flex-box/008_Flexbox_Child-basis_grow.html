@@ -1,0 +1,53 @@
+<!-- 
+CSS правила для дочерних элементов flex-контейнера (flex-блоков)
+
+****************************************************************
+
+flex-basis – базовый размер отдельно взятого flex-блока
+Задает изначальный размер по главной оси для flex-блока до того, как к нему будут применены преобразования, основанные на других flex-факторах. Может быть задан в любых единицах измерения длинны (px, em, %, …) или auto(по умолчанию). Если задан как auto – за основу берутся размеры блока (width, height), которые, в свою очередь, могут зависеть от размера контента, если не указанны явно.
+
+flex-grow – “жадность” отдельно взятого flex-блока
+Определяет то, на сколько отдельный flex-блок может быть больше соседних элементов, если это необходимо. flex-grow принимает безразмерное значение ( по умолчанию 0)
+
+Т.е абсолютное значение flex-grow не определяет точную ширину. Оно определяет его степень “жадности” по отношению к другим flex-блокам того же уровня.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>008_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			height: 60vh;
+			display: flex;
+			flex-wrap: wrap;	
+			justify-content: space-around;
+			align-content: space-around;
+			background: #000;
+		}
+		.my-flex-block {
+			text-align: center;
+			flex-basis: 300px;
+		}
+		.my-flex-block:nth-child(odd){
+			flex-grow: 3;
+			background: #ff0;
+		}
+		.my-flex-block:nth-child(even){
+			flex-grow: 12;
+			background: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block">item1</div>
+		<div class="my-flex-block">item2</div>
+		<div class="my-flex-block">item3</div>
+		<div class="my-flex-block">item4</div>
+		<div class="my-flex-block">item5</div>
+		<div class="my-flex-block">item6</div>
+		<div class="my-flex-block">item7</div>
+	</div>
+</body>
+</html>

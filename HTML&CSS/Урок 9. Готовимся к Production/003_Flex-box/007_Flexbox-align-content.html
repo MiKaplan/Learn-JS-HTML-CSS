@@ -1,0 +1,53 @@
+<!-- 
+Существует также свойство align-content, которое определяет то, каким образом образовавшиеся ряды блоков будут выровнены по вертикали и как они поделят между собой все пространство flex-контейнера.
+
+Важно: align-content работает только в многострочном режиме (т.е. в случае flex-wrap:wrap; или flex-wrap:wrap-reverse;)
+
+Доступные значения align-content:
+
+1. flex-start: ряды блоков прижаты к началу flex-контейнера.
+2. flex-end: ряды блоков прижаты к концу flex-контейнера
+3. center: ряды блоков находятся в центре flex-контейнера
+4. space-between: первый ряд блоков располагается в начале flex-контейнера, последний ряд блоков блок – в конце, все остальные ряды равномерно распределены в оставшемся пространстве.
+5. space-around: ряды блоков равномерно распределены в от начала до конца flex-контейнера, разделяя все свободное пространство поровну.
+6. stretch (значение по умолчанию): Ряды блоков растянуты, дабы занять все имеющееся пространство.
+
+СSS свойства flex-wrap и align-content должны применяться непосредственно к flex-контейнеру, а не к его дочерним элементам.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>007_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			height: 60vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			background: #000;
+		}
+		.my-flex-block {
+			width: 50%;
+			text-align: center;
+		}
+		.my-flex-block:nth-child(even){
+			background: #f00;
+		}
+		.my-flex-block:nth-child(odd){
+			background: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block">item1</div>
+		<div class="my-flex-block">item2</div>
+		<div class="my-flex-block">item3</div>
+		<div class="my-flex-block">item4</div>
+		<div class="my-flex-block">item5</div>
+		<div class="my-flex-block">item6</div>
+	</div>
+</body>
+</html>

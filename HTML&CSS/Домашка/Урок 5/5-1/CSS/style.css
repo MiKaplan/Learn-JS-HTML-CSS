@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+}
+#parent {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -250px;
+}
+.child {
+    position: absolute;
+    background: #fff;
+}
+#d1 {
+    width: 150px;
+    height: 500px;
+}
+#d2 {
+    width: 200px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    left: 151px;
+}
+#d3 {
+    width: 200px;
+    height: 299px;
+    left: 151px;
+    top: 201px;
+}
+#d4 {
+    width: 352px;
+    height: 70px;
+    top: 60px;
+}
+#d5 {
+    width: 348px;
+    height: 120px;
+    left: 152px;
+    top: 270px;
+}
+#d1,
+#d2,
+#d3 {
+    border-right: 1px solid black;
+    z-index: 1;
+}
+#d2, 
+#d3 {
+    border-left: 1px solid black;
+}
+#d4,
+#d5 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 2;
+}

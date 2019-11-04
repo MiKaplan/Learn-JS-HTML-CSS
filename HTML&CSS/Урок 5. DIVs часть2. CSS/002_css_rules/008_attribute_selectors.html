@@ -1,0 +1,47 @@
+<!-- Простой селектор атрибута
+Устанавливает стиль для элемента, если задан специфичный атрибут тега. Его значение в данном случае не важно.
+elem[attribute]{
+    property: value
+}
+
+Атрибут со значением
+elem[attribute='name']{
+    property: value
+}
+
+Значение атрибута начинается с определённого текста
+a[href^="http://"] { 
+    property: value
+   }
+
+Значение атрибута оканчивается определённым текстом
+a[href$=".com"] { 
+    property: value
+   }
+
+Значение атрибута содержит указанный текст
+a[href*=".com"] { 
+    property: value 
+   }
+-->
+<html>
+<head>
+    <title>Attribute selector</title>
+    <meta charset='UTF-8' />
+    <style type="text/css">
+        p[title] {
+            background-color: Red;
+        }
+
+        p[title="hello"] {
+            background-color: Blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Paragraph</p>
+    <p title="">Paragraph</p>
+    <p title="hi">Paragraph</p>
+    <p title="hello">Paragraph</p>
+</body>
+</html>

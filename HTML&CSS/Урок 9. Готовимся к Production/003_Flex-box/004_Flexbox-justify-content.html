@@ -1,0 +1,58 @@
+<!-- 
+Css свойство justify-content определяет то, как будут выровнены элементы вдоль главной оси.
+
+Доступные значения justify-content:
+
+1. flex-start (значение по умолчанию) : блоки прижаты к началу главной оси
+2. flex-end: блоки прижаты к концу главной оси
+3. center: блоки располагаются в центре главной оси
+4. space-between: первый блок располагается в начале главной оси, последний блок – в конце, все остальные блоки равномерно распределены в оставшемся пространстве.
+5. space-around: все блоки равномерно распределены вдоль главной оси, разделяя все свободное пространство поровну.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>004_Flexbox</title>
+	<style type="text/css">
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	.my-flex-container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.my-flex-container > div {
+		border: 1px solid #000;
+		width: 100px;
+		height: 50px;
+	}
+	@media only screen and (max-width: 460px) {
+		.my-flex-container{
+			flex-direction: column;
+			justify-content: space-around;
+			height: 500px;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+	</div>
+</body>
+</html>

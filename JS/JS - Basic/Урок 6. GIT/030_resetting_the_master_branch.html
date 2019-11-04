@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">30. Сброс ветки master</h1>
+<h3>Цели</h3>
+
+<ul><li>Сбросить ветку master в точку до конфликтующего коммита.</li></ul>
+
+<h2><em>01</em> Сброс ветки master</h2>
+
+<p>Добавив интерактивный режим в ветку master, мы внесли изменения, конфликтующие с изменениями в ветке style. Давайте вернемся в ветке master в точку перед внесением конфликтующих изменений. Это позволяет нам продемонстрировать работу команды rebase, не беспокоясь о конфликтах.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git checkout master
+    git hist</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git hist
+    * 454ec68 2011-03-09 | Life is great! (HEAD, master) [Alexander Shvets]
+    * 6c0f848 2011-03-09 | Added README [Alexander Shvets]
+    * 8029c07 2011-03-09 | Added index.html. [Alexander Shvets]
+    * 567948a 2011-03-09 | Moved hello.html to lib [Alexander Shvets]
+    * 6a78635 2011-03-09 | Add an author/email comment [Alexander Shvets]
+    * fa3c141 2011-03-09 | Added HTML header (v1) [Alexander Shvets]
+    * 8c32287 2011-03-09 | Added standard HTML page tags (v1-beta) [Alexander Shvets]
+    * 43628f7 2011-03-09 | Added h1 tag [Alexander Shvets]
+    * 911e8c9 2011-03-09 | First Commit [Alexander Shvets]</pre>
+
+<p>Коммит «Added <span>README</span>» идет непосредственно перед коммитом конфликтующего интерактивного режима. Мы сбросим ветку master к коммиту «Added <span>README</span>».</p>
+
+<h4>Выполните:</h4>
+
+<pre>git reset --hard &lt;hash&gt;
+git hist --all</pre>
+
+<p>Просмотрите лог. Он должен выглядеть, как будто  репозиторий был перемотан назад во времени к точке до какого-либо слияния.</p>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git reset --hard 6c0f848
+    $ git hist --all
+    * 6c0f848 2011-03-09 | Added README (HEAD, master) [Alexander Shvets]
+    | * 07a2a46 2011-03-09 | Updated index.html (style) [Alexander Shvets]
+    | * 649d26c 2011-03-09 | Hello uses style.css [Alexander Shvets]
+    | * 1f3cbd2 2011-03-09 | Added css stylesheet [Alexander Shvets]
+    |/  
+    * 8029c07 2011-03-09 | Added index.html. [Alexander Shvets]
+    * 567948a 2011-03-09 | Moved hello.html to lib [Alexander Shvets]
+    * 6a78635 2011-03-09 | Add an author/email comment [Alexander Shvets]
+    * fa3c141 2011-03-09 | Added HTML header (v1) [Alexander Shvets]
+    * 8c32287 2011-03-09 | Added standard HTML page tags (v1-beta) [Alexander Shvets]
+    * 43628f7 2011-03-09 | Added h1 tag [Alexander Shvets]
+    * 911e8c9 2011-03-09 | First Commit [Alexander Shvets]</pre>
+
+</body>
+</html>

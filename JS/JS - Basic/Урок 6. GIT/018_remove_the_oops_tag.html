@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">18. Удаление тега oops</h1>
+<h3>Цели</h3>
+
+<ul><li>Удаление тега oops (уборка)</li></ul>
+
+<h2><em>01</em> Удаление тега oops</h2>
+
+<p>Тег oops свою функцию выполнил. Давайте удалим его и коммиты, на которые он ссылался, сборщиком мусора.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git tag -d oops
+    git hist --all</pre>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git tag -d oops
+    Deleted tag 'oops' (was 45fa96b)
+    $ git hist --all
+    * fa3c141 2011-03-09 | Added HTML header (HEAD, v1, master) [Alexander Shvets]
+    * 8c32287 2011-03-09 | Added standard HTML page tags (v1-beta) [Alexander Shvets]
+    * 43628f7 2011-03-09 | Added h1 tag [Alexander Shvets]
+    * 911e8c9 2011-03-09 | First Commit [Alexander Shvets]</pre>
+
+<p>Тег «oops» больше не будет отображаться в репозитории.</p>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!--  
+    :first-child — задает стиль для элемента, являющегося первым потомком своего родителя.
+    :last-child — задает стиль для элемента, являющегося последним потомком своего родителя.
+-->
+
+<html>
+<head>
+    <title>first&last child</title>
+    <style>
+        div#footer {
+            background-color: #3cc0c4;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin: auto;
+            width: 725px;
+            height: 130px;
+        }
+
+            div#footer a {
+                color: #f5f029;
+                text-decoration: none;
+            }
+
+            div#footer a:hover {
+                text-decoration: underline;
+            }
+
+        div.groupLinks {
+            font-family: 'Segoe UI';
+            float: left;
+            padding: 0px 30px;
+        }
+
+        div ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li:first-child {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        li:last-child {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="footer">
+
+        <div class="groupLinks">
+            <ul>
+                <li>Link group</li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+                <li><a href="#">link5</a></li>
+            </ul>
+        </div>
+        <div class="groupLinks">
+            <ul>
+                <li>Link group</li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+                <li><a href="#">link5</a></li>
+            </ul>
+        </div>
+        <div class="groupLinks">
+            <ul>
+                <li>Link group</li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+                <li><a href="#">link5</a></li>
+            </ul>
+        </div>
+        <div class="groupLinks">
+            <ul>
+                <li>Link group</li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+                <li><a href="#">link5</a></li>
+            </ul>
+        </div>
+        <div class="groupLinks">
+            <ul>
+                <li>Link group</li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+                <li><a href="#">link5</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+

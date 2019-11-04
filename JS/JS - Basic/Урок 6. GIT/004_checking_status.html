@@ -1,0 +1,63 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <h1 class="title">4. Проверка состояния</h1>
+        
+    <h3>Цели</h3>
+
+    <ul><li>Научиться проверять состояние репозитория</li></ul>
+
+    <h2><em>01</em> Проверьте состояние репозитория</h2>
+
+    <p>Используйте команду <code>git status</code>, чтобы проверить текущее состояние репозитория.</p>
+
+    <h4>Выполните:</h4>
+
+    <pre>
+    git status</pre>
+
+    <p>Вы увидите</p>
+
+    <h4>Результат:</h4>
+
+    <pre>
+        $ git status
+        # On branch master
+        nothing to commit (working directory clean)</pre>
+
+    <p>Команда проверки состояния сообщит, что коммитить нечего. Это означает, что в репозитории хранится текущее состояние рабочего каталога, и нет никаких изменений, ожидающих записи.</p>
+
+    <p>Мы будем использовать команду <code>git status</code>, чтобы продолжать отслеживать состояние репозитория и рабочего каталога.</p>
+    <pre>
+        git config --global core.quotepath off</pre>
+</body>
+</html>

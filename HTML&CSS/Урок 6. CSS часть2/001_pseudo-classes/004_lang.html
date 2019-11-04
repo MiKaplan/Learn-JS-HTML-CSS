@@ -1,0 +1,35 @@
+﻿<!--  
+    :lang определяет язык, который используется в документе или его фрагменте.
+-->
+
+<html>
+<head>
+    <title>hover</title>
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+            font-size: 20pt;
+        }
+
+        q:lang(de) {
+            quotes: "\201E" "\201C";
+        }
+
+        q:lang(en) {
+            quotes: "\201C" "\201D";
+        }
+
+        q:lang(fr), q:lang(ru) {
+            quotes: "\00AB" "\00BB";
+        }
+    </style>
+</head>
+<body>
+    <p>Цитата на французском языке: <q lang="fr">Ce que femme veut, Dieu le veut</q>.</p>
+    <p>Цитата на немецком: <q lang="de">Der Mensch, versuche die Gotter nicht</q>.</p>
+    <p>Цитата на английском: <q lang="en">То be or not to be</q>.</p>
+</body>
+</html>
+
+

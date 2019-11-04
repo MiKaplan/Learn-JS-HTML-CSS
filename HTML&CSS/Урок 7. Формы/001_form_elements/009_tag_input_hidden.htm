@@ -1,0 +1,34 @@
+<!--
+    input type="hidden" - Скрытое поле. Оно никак не отображается на веб-странице.
+-->
+
+<html>
+<head>
+    <title>Íåâèäèìîå ïîëå</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Ivan" />
+        <br />
+        Enter your second name:
+        <input type="text" name="sec_name" value="Ivanov" />
+        <br />
+        Enter your password:
+        <input type="password" name="password" />
+
+        <input type="hidden" name="user_id" value="1234" />
+        <input type="hidden" name="price" value="100" />
+        <input type="hidden" name="payment_type" value="MasterCard" />
+
+        <br />
+        <input type="submit" name="submit" value="Enter" />
+    </form>
+</body>
+</html>

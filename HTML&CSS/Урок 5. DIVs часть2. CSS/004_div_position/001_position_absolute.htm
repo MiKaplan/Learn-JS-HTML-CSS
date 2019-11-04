@@ -1,0 +1,63 @@
+﻿<!--
+    Значение absolute перемещает блочный элемент по оси z на плоскость выше, при этом элемент будет вести себя так, как будто там больше ничего нет, то есть позиционироваться как обычный тег div.
+    Место которое он занимал на прежней плоскости, будет свободным,что повлияет на размещение других элементов.
+    
+    Для позиционирования на новой плоскости элемент использует следующие свойства:
+        1.Top
+        2.Left
+        3.Right
+        4.Bottom
+        5.z-index
+
+    При указании абсолютного позиционирования элементов,можно явно указать плоскость, на которую будет перемещен элемент при помощи свойства z-index.
+-->
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Position Absolute</title>
+    <style type="text/css">
+        div {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+        }
+
+        #Green {
+            z-index: 3;
+            top: 30px;
+            left: 30px;
+            background-color: Green;
+            position: absolute;
+        }
+
+        #Red {
+            z-index: 2;
+            top: 20px;
+            left: 20px;
+            background-color: Red;
+            position: absolute;
+        }
+
+        #Yellow {
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+            background-color: Yellow;
+            position: absolute;
+        }
+        body {
+            margin: 0px
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="Green"></div>
+    <div id="Red"></div>
+    <div id="Yellow"></div>
+</div>
+</body>
+</html>

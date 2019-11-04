@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="title">24. Изменения в ветке master</h1>
+<h3>Цели</h3>
+
+<ul><li>Научиться работать с несколькими ветками с различными (и, возможно, конфликтующими) изменениями.</li></ul>
+
+<p>Пока вы меняли ветку «style», кто-то решил обновить ветку master. Они добавили <span>README</span>.</p>
+
+<h2><em>01</em> Создайте файл <span>README</span> в ветке master.</h2>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git checkout master</pre>
+
+<h4>Файл: <em><span>README</span></em></h4>
+
+<pre class="file">This is the Hello World example from the git tutorial.</pre>
+
+<h2><em>02</em> Сделайте коммит изменений <span>README</span> в ветку master.</h2>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git add README
+    git commit -m "Added README"</pre>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+    Тег table возможно стилизировать как при помощи атрибутов, определяющих стиль тегов, так и при помощи тега style, который помогает интегрировать css непосредственно в конкретный элемент.
+-->
+
+<html>
+<head>
+    <title>Стили в теге Table</title>
+    <meta charset="utf-8">
+</head>
+<body style="font-family: 'Segoe UI';">
+
+    <h1>HTML-attributes:</h1>
+    <table border="1" cellspacing="0" width="800" height="400" background="Images/mercedes.png">
+        <tr>
+            <td bgcolor="red" valign="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.</td>
+            <td valign="top" align="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.</td>
+        </tr>
+        <tr>
+            <td valign="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.</td>
+            <td bgcolor="rgba(128, 0, 128, .5)" valign="top" align="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.</td>
+        </tr>
+    </table>
+
+    <h1>CSS:</h1>
+    <table border="1" style="color: white; border-collapse: collapse; background: url(Images/mercedes.png) no-repeat; background-size: contain; background-position: center center; width: 800px; height: 400px;">
+        <tr>
+            <td style="text-align: left; vertical-align: top; background: rgba(128, 0, 128, .5)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.
+            </td>
+            <td style="text-align: right; vertical-align: top; background: rgba(128, 128, 0, .5)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: bottom; background: rgba(0, 128, 128, .5)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.
+            </td>
+            <td style="text-align: right; vertical-align: bottom; background: rgba(128, 128, 128, .5)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate at massa rutrum viverra.
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

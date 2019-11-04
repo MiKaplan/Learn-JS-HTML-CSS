@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+#main-form {
+    width: 100%;
+    height: 100%;
+    font-weight: bolder;
+}
+#head {
+  width: 100%;
+  height: 40px;
+  background: rgb(180, 247, 81);
+  box-shadow: 0px 1px 10px rgb(95, 185, 39);
+}
+#head label {
+  display: block;
+  width: 100%;
+  margin-left: 15px;
+}
+#head span {
+  font-size: 23px;
+  text-align: center;
+  line-height: 40px;
+  padding-right: 25px;
+}
+#head select {
+  display: inline-block;
+  width: 110px;
+  font-size: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border: none;
+  background: url("https://image.flaticon.com/icons/png/512/57/57055.png");
+  background-repeat: no-repeat;
+  background-size: 10px 15px;
+  background-position: right 2px;
+  outline: none;
+}
+#personal-data {
+    width: 100%;
+    height: 650px;
+}
+#left, 
+#right {
+    width: 49%;
+    height: 600px;
+    float: left;
+}
+#left label,
+#rigth label {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+#left label:first-child,
+#rigth label:first-child {
+    margin-top: 15px;
+}
+#left input,
+#left textarea,
+select[name="state"] {
+    float: right;
+    width: 300px;
+    box-sizing: border-box;
+    height: 23px;
+    border: 1px solid gray;
+    outline: none;
+}
+.little-input {
+    width: 150px !important; 
+    margin-right: 150px;
+}
+.textarea-label {
+    height: 120px
+}
+#left textarea {
+   height: 120px; 
+   resize: none;
+}
+#url,
+#link {
+    display: inline-block;
+}
+#url label,
+#link label {
+    float: right;
+}
+#link input,
+#url input {
+    width: 200px;
+}
+#url span,
+#link span {
+    font-weight: normal;
+    margin-right: 7px;
+}
+#web {
+    vertical-align: top;
+     margin: 15px;
+}
+#link-web {
+    float: right;
+}
+.mail-label {
+    margin-top: 83px;
+}
+#right {
+    margin-left: 20px;
+}
+h4 {
+    width: 317px;
+    margin-top: 15px;
+}
+.div-r {
+    position: relative;
+    width: 500px;
+    min-height: 100px;
+}
+.radio-div {
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+.div-r span {
+    font-weight: normal;
+}
+.radio-div_two {
+    position: absolute;
+    top: 0;
+    right: 30px; 
+}
+#right textarea {
+    float: right;
+    width: 300px;
+    height: 150px;
+    margin-right: 15px;
+    resize: none;
+    outline: none; 
+}
+.bottoms {
+    box-shadow: 0px 1px 10px rgb(122, 122, 122);
+    background: rgb(209, 209, 209);
+    width: 100%;
+    height: 100px;
+}
+#bottoms input { 
+    width: 120px;
+    height: 50px;
+    background: rgb(145, 199, 64);
+    margin-top: 25px;
+    color: rgb(255, 239, 239);
+    font-size: 20px;
+    border: 1px solid rgb(153, 153, 153);
+}
+#bottoms input[type="submit"] {
+    margin-right: 20px;
+}
+#bottoms {
+    width: 266px;
+    margin: auto;
+}

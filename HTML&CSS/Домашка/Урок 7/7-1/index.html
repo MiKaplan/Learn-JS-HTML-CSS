@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="main-form">
+      <label>
+        <span class="label-descripion">Твое имя</span>
+        <input type="text" name="name" />
+      </label>
+      <label>
+        <span class="label-descripion">Твой email</span>
+        <input type="email" name="email" />
+      </label>
+      <label>
+        <span class="label-descripion">Тема сообщения</span>
+        <select name="theme">
+          <option value="zero"></option>
+          <option value="ramdom1">Random 1</option>
+          <option value="ramdom2">Random 2</option>
+          <option value="ramdom3">Random 3</option>
+          <option value="ramdom4">Random 4</option>
+        </select>
+      </label>
+      <label id="area">
+        <span class="label-descripion">Текст *</span>
+        <textarea name="textarea"></textarea>
+      </label>
+
+      <label>
+        <span class="label-descripion">Защита от спама *</span>
+        <input type="text" name="protect" />
+        <img src="img/1.png" alt="protect" />
+        <a href="#">сменить картинку</a>
+      </label>
+      <input id="enter" type="submit" value="отправить">
+    </form>
+  </body>
+</html>

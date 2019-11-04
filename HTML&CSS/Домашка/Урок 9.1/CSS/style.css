@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.top,
+.middle,
+.bottom {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    align-items: flex-end;
+}
+.head, 
+.foot {
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+.head {
+    margin: 0px auto;
+}
+span {
+    line-height: 50px;
+}
+p,
+hr {
+    position: absolute;
+}
+.first_arrow_line_1,
+.second_arrow_line_1,
+.third_arrow_line_1{
+    margin-top: 17px;
+    font-size: 30px;
+}
+.first_arrow_line_2,
+.second_arrow_line_2,
+.third_arrow_line_2{
+    margin-top: 121px;
+    font-size: 30px;
+}
+.first_arrow_line_3,
+.second_arrow_line_3,
+.third_arrow_line_3{
+    margin-top: 226px;
+    font-size: 30px;
+}
+.first_arrow_line_1,
+.first_arrow_line_2,
+.first_arrow_line_3
+ {
+    margin-left: -100px;
+}
+.third_arrow_line_1,
+.third_arrow_line_2,
+.third_arrow_line_3 {
+    margin-left: 100px;
+}
+.horizontal_line_1 {
+    border: none;
+    width: 200px;
+    margin-top: 24px;
+    background-color: black;
+    color: black;
+    height: 2px;   
+}
+.horizontal_line_2 {
+    border: none;
+    width: 200px;
+    margin-top: 128px;
+    background-color: black;
+    color: black;
+    height: 2px;   
+}
+.horizontal_line_3 {
+    border: none;
+    width: 200px;
+    margin-top: 233px;
+    background-color: black;
+    color: black;
+    height: 2px;
+    
+}
+.vertical_line_1 {
+    height: 25px;
+    border-left: 2px solid black;
+    margin-top: 0px;
+}
+.vertical_line_2 {
+    height: 25px;
+    border-left: 2px solid black;
+    margin-top: 104px;
+    margin-left: 100px;
+}
+.vertical_line_3 {
+    height: 25px;
+    border-left: 2px solid black;
+    margin-top: 208px;
+}
+.middle > .vertical_line {
+    margin-left: 100px;
+    margin-left: 100px;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    /* margin-top: 50px;
+    height: 265px; */
+}
+.head:hover,
+.head:hover ~ .box .foot{
+background: crimson;
+}
+
+.main:nth-child(2) .box .foot:nth-child(3):hover,
+.main:nth-child(2) .box .foot:nth-child(3):hover ~ .main:nth-child(2) .box .foot:nth-child(-n+4z){
+    background: darkgreen;
+}

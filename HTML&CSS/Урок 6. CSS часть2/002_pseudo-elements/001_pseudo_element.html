@@ -1,0 +1,30 @@
+﻿<!--  
+    Псевдоэлементы позволяют задать стиль элементов не определённых в дереве элементов документа, а также генерировать содержимое, которого нет в исходном коде текста.
+-->
+
+<html>
+<head>
+    <title>pseudo element</title>
+    <style>
+        div:after {
+            content: " - это div!!!";
+            color: red;
+        }
+
+        p:after {
+            content: " - это параграф!!!";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id arcu ullamcorper, finibus metus vitae, placerat neque. Suspendisse volutpat mauris quis sem placerat feugiat. Cras commodo placerat aliquet. Vestibulum lorem neque, efficitur vel tortor consequat, tristique vehicula urna. Suspendisse sed diam feugiat, venenatis ligula porta, maximus libero. Mauris tempus at risus et ornare. Cras vitae volutpat tortor. Phasellus quis erat feugiat, luctus ipsum quis, ultrices erat. Nullam maximus non ante id iaculis. Morbi eleifend urna sapien, euismod placerat ipsum volutpat id. Nam nec facilisis leo, ac luctus velit. Ut et est sit amet nulla sollicitudin dignissim. Nulla mattis odio libero, nec porttitor massa iaculis egestas. Maecenas mattis mauris eget laoreet sodales. In accumsan ac tortor at varius. Maecenas iaculis feugiat ligula, a mollis leo convallis sed.
+    </div>
+    <p>
+        Vestibulum mollis nunc vel efficitur dignissim. Duis ac sodales tellus. Integer a nunc convallis, fermentum odio a, ornare orci. Mauris sed malesuada nulla. Maecenas leo erat, gravida sed risus sed, faucibus porta nisi. Sed malesuada nisl non eros congue ullamcorper. Nunc vel metus nec libero volutpat iaculis. Vestibulum tortor ex, hendrerit id dui eu, fringilla suscipit nisi. Mauris dignissim vulputate elementum. Curabitur quis risus et sem ullamcorper placerat. Mauris a leo pretium, tincidunt ante vitae, sagittis massa. Maecenas rutrum tincidunt laoreet. Curabitur rutrum ac massa eu laoreet. Donec efficitur ullamcorper augue.
+    </p>
+</body>
+</html>
+
+

@@ -1,0 +1,44 @@
+﻿<!--  
+    :first-child — задает стиль для элемента, являющегося первым потомком своего родителя.
+    :last-child — задает стиль для элемента, являющегося последним потомком своего родителя.
+-->
+
+<html>
+<head>
+    <title>nth-of-type</title>
+    <style>
+        ul {
+            width: 200px;
+            background: #808080;
+            color: white;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #3d3d3d;
+            border-top: 1px solid #c3c3c3;
+        }
+
+            li:first-child {
+                border-top: none;
+            }
+
+            li:last-child {
+                border-bottom: none;
+            }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+</body>
+</html>
+
+

@@ -1,0 +1,34 @@
+<!--
+    readonly - Устанавливает, что поле не может изменяться пользователем.
+-->
+
+<html>
+<head>
+    <title>àòðèáóò style</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Ivan" />
+        <br />
+        Enter your second name1(readonly):
+        <input type="text" name="sec_name1" value="Ivanov" readonly="readonly" />
+        <br />
+        Enter your second name2(disabled):
+        <input type="text" name="sec_name2" value="Ivanovich" disabled="disabled" />
+        <br />
+        Enter your password:
+        <input type="password" name="password" />
+        <br />
+        <input type="submit" name="submit" value="Enter" />
+        <br />
+        <input type="reset" name="reset" value="Reset" />
+    </form>
+</body>
+</html>

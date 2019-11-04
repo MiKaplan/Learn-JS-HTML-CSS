@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+.menu-item {
+    width: 80px;
+    height: 40px;
+    border: 1px solid black;
+}
+@media only screen and (max-widht: 460px) {
+    .flex-container {
+        flex-direction: column;
+        height: 300px;
+    }
+}

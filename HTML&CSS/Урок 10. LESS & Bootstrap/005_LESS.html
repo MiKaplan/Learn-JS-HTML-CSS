@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>005_LESS</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+	</style>
+</head>
+<body>
+	<h1>Variables</h1>
+	<pre>
+		<code>
+			@block-background: #f5f5f5;
+			@block-color: #333;
+			@block-border-color: #ddd;
+		</code>
+	</pre>
+	<p>
+		Для того, чтобы использовать значение переменной при написании кода, необходимо её вызвать. Делается это так:
+	</p>
+	<pre>
+		<code>
+			.block {
+			  background-color: @block-background;
+			  color: @block-color;
+			  border: 1px solid @block-border-color;
+			}
+		</code>
+	</pre>
+
+</body>
+</html>

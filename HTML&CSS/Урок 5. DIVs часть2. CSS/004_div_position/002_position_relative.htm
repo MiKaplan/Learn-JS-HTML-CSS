@@ -1,0 +1,58 @@
+﻿<!-- 
+    Значение relative говорит блочному элементу переместиться по оси z на плоскость выше, при этом элемент будет позиционироваться относительно места, где должен был располагаться, и остальные элементы не будут смещаться, так как место не будет свободно.
+    
+    При этом, для позиционирования на новой плоскости, элемент получает специальные свойства:
+        1.Top
+        2.Left
+        3.Right
+        4.Bottom
+        5.z-index
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Position Absolute</title>
+    <style type="text/css">
+        div {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+        }
+
+        #Green {
+            z-index: 3;
+            top: 30px;
+            left: 30px;
+            position: relative;
+            background-color: Green;
+        }
+
+        #Red {
+            z-index: 2;
+            top: 20px;
+            left: 20px;
+            position: relative;
+            background-color: Red;
+        }
+
+        #Yellow {
+            z-index: 1;
+            position: relative;
+            background-color: Yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="Green"></div>
+   
+        <div id="Red"></div>
+    
+        <div id="Yellow"></div>
+    </div>
+</body>
+</html>
+

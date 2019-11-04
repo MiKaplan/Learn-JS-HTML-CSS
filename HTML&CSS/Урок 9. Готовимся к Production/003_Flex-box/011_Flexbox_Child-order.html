@@ -1,0 +1,40 @@
+<!-- 
+order – порядок следования отдельно взятого flex-блока внутри flex-контейнера.
+По умолчанию все блоки будут следовать друг за другом в порядке, заданном в html. Однако этот порядок можно изменить с помощью свойства order. Оно задается целым числом и по умолчанию равно 0.
+
+Значение order не задает абсолютную позицию элемента в последовательности. Оно определяет вес позиции элемента.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>008_Flexbox</title>
+	<style type="text/css">
+		.my-flex-container{
+			height: 60vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.my-flex-block {
+			text-align: center;
+			border: 1px solid #000;
+			flex-basis: 20em;
+			align-self: stretch;
+		}
+		.my-flex-block:nth-child(odd){
+			background: #eae5e5;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-flex-container">
+		<div class="my-flex-block" style="order: 2" >item1</div>
+		<div class="my-flex-block" style="order: 1" >item2</div>
+		<div class="my-flex-block" style="order: 4" >item3</div>
+		<div class="my-flex-block" style="order: 5" >item4</div>
+		<div class="my-flex-block" style="order: 3" >item6</div>
+		<div class="my-flex-block" style="order: 6" >item5</div>
+	</div>
+</body>
+</html>

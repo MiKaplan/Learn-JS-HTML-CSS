@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>007_LESS</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		pre {
+			background: #f9f9f9;
+		}
+		p, ul {
+			width: 80%;
+			margin: 50px auto;
+			font-size: 18px;
+			font-family: Verdana
+		}
+		/* .bordered(@_color) {
+			  border-top: dotted 1px @_color;
+			  border-bottom: solid 2px @_color;
+			}
+
+		.article {
+			  .bordered(#ccc);
+			  color: #443d3d;
+			} */
+	</style>
+</head>
+<body>
+	<h1>Примеси</h1>
+	<p>
+		Когда-то давно, наверное, только ленивый разработчик не мечтал о переиспользуемом CSS-коде. Вы только представьте себе то, что какой-нибудь блок кода может быть вызван повторно, и все его свойства станут доступны и второму селектору. Тогда это были желания, сейчас же это реальность.<br>
+		В отличие от других CSS-препроцессоров, в Less любой объявленный селектор может использоваться как примесь. Примесь (от англ. mix-in) — набор свойств и селекторов, расширяющий поведение другой сущности (селектора).
+	</p>
+	<pre>
+		<code>
+			.bordered() {
+			  border-top: dotted 1px #333;
+			  border-bottom: solid 2px #333;
+			}
+
+			.article {
+			  .bordered;
+			  color: #443d3d;
+			}
+			******************************
+			.bordered(@_color) {
+			  border-top: dotted 1px @_color;
+			  border-bottom: solid 2px @_color;
+			}
+
+			.article {
+			  .bordered(#ccc);
+			  color: #443d3d;
+			}
+		</code>
+	</pre>
+</body>
+</html>

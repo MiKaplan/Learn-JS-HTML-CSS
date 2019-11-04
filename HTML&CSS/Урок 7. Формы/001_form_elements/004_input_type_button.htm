@@ -1,0 +1,45 @@
+<!--
+    input type="button" Кнопка.
+
+    input type="submit" — Кнопка для отправки данных формы на сервер.
+    
+    input type="reset" — Кнопка для возвращения данных формы в первоначальное значение.
+-->
+
+<html>
+<head>
+    <title>Ñîçäàíèå êíîïîê</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Ivan" />
+        <br />
+
+        Enter your second name:
+        <input type="text" name="sec_name" value="Ivanov" />
+        <br />
+
+        Enter your password:
+        <input type="password" name="password" placeholder='Enter password here' />
+        <br />
+
+        <!-- <input type="submit" name="submit" value="Enter" />
+        <br />
+
+        <input type="reset" name="reset" value="Reset" />
+        <br /> -->
+
+     <input type="button" name="button" value="Say hello" onclick="alert('hello world')" />
+     <br>
+     <button onclick="alert('hello')">Hello</button>
+    </form>
+</body>
+</html>

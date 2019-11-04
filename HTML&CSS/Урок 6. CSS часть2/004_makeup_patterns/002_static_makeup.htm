@@ -1,0 +1,60 @@
+﻿<!-- 
+    Ширина при статической верстке определяется из расчета популярного используемого разрешения экранов.
+    Недостаток при таком методе верстки – это неэффективное использование свободной площади.
+-->
+
+<html>
+<head>
+    <title>Статическая верстка</title>
+    <style>
+        body {
+            width: 900px;
+            margin: auto;
+        }
+
+        #header {
+            width: 900px;
+            height: 150px;
+            background-color: Navy;
+        }
+
+        #body {
+            width: 900px;
+            height: 450px;
+            background-color: Silver;
+        }
+
+            #body div:first-child {
+                width: 300px;
+                height: 450px;
+                background-color: Gray;
+                float: left;
+            }
+
+            #body div:last-child {
+                width: 600px;
+                height: 450px;
+                background-color: #ff6a00;
+                float: left;
+            }
+
+        #footer {
+            width: 900px;
+            height: 50px;
+            background-color: Yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="body">
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+</html>

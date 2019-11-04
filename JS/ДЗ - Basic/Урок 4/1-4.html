@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      var num = +prompt("Enter number");
+      var array = new Array(num);
+
+      for (var i = 0; i < array.length; i++) {
+        array[i] = new Array(3);
+        for (var j = 0; j < array[i].length; j++) {
+          if (i % 2 == 0) {
+            array[i][j] = "even";
+          } else {
+            array[i][j] = "odd";
+          }
+        
+        }
+      }
+      for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br/>");
+        }
+        console.log(array);
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

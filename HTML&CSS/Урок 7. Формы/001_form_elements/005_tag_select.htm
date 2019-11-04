@@ -1,0 +1,49 @@
+<!--
+    Тег <select> позволяет создать элемент интерфейса в виде раскрывающегося списка, а также список с одним или множественным выбором, как показано далее. 
+    
+    Атрибут selected="selected" отвечает за выбранный по умолчанию вариант для выпадающего списка
+-->
+
+<html>
+<head>
+    <title>Òåã select</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Ivan" />
+        <br />
+        Enter your second name:
+        <input type="text" name="sec_name" value="Ivanov" />
+        <br />
+        Enter your password:
+        <input type="password" name="password" />
+        <br />
+
+        <!-----------------------------------------------====================Варианты выбора==================-------------------------------------------------------------->
+
+        Your favorite film:
+                <select name="select" >
+                    <option value=""></option>
+                    <option value="Bad Boys">Bad Boys</option>
+                    <option value="film003" >Revenge</option>
+                    <option value="film004" >Crow</option>
+                    <option value="film005">Dead Man Walkin</option>
+                    <option value="film006">Wrong thing</option>
+                </select>
+
+        <!-----------------------------------------------====================Варианты выбора==================-------------------------------------------------------------->
+
+        <br />
+        <input type="submit" name="submit" value="Enter" />
+        <br />
+        <input type="reset" name="reset" value="Reset" />
+    </form>
+</body>
+</html>

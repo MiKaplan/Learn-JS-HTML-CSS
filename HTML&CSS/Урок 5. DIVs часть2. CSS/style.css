@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+}
+#parent {
+    height: 304px;
+    width: 102px;
+    position: relative;
+    top: 50%;
+    margin-top: -152px;
+    left: 50%;
+    margin-left: -51px;
+}
+.child {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    position: relative;
+}
+#green,
+#yellow {
+    border-bottom: none;
+}
+#green {
+    background: #0f0;
+}
+#yellow {
+    background: #ff0;
+}
+#red {
+    background: #f00;
+}
+.explanation {
+    position: absolute;
+    width: 50px;
+    border-bottom: 1px solid #000;
+    left: -42px;
+    top: 45px;
+}

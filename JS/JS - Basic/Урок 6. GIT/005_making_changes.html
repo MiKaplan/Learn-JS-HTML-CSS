@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+    <title>GIT</title>
+    <style type="text/css">
+        body {
+            background: #f2f2f2;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        code, pre {
+            background: #ccc;
+            padding: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0px 0px 20px
+        }
+        h4 {
+            margin: 0px;
+            background: #aaa;
+            display: inline-block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <h1 class="title">5. Внесение изменений</h1>
+<h3>Цели</h3>
+
+<ul><li>Научиться отслеживать состояние рабочего каталога</li></ul>
+
+<h2><em>01</em> Измените страницу «Hello, World»</h2>
+
+<p>Добавим кое-какие HTML-теги к нашему приветствию. Измените содержимое файла на:</p>
+
+<h4>Файл: <em style="text-transform: none">hello.html</em></h4>
+
+<pre class="file">
+    <strong>&lt;h1&gt;</strong>Hello, World!<strong>&lt;/h1&gt;</strong></pre>
+
+<h2><em>02</em> Проверьте состояние</h2>
+
+<p>Теперь проверьте состояние рабочего каталога.</p>
+
+<h4>Выполните:</h4>
+
+<pre>
+    git status</pre>
+
+<p>Вы увидите …</p>
+
+<h4>Результат:</h4>
+
+<pre>
+    $ git status
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add &lt;file&gt;..." to update what will be committed)
+    #   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+    #
+    #   modified:   hello.html
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")</pre>
+
+<p>Первое, что нужно заметить, это то, что git знает, что файл <code>hello.html</code> был изменен, но при этом эти изменения еще не зафиксированы в репозитории.</p>
+
+<p>Также обратите внимание на то, что сообщение о состоянии дает вам подсказку о том, что нужно делать дальше. Если вы хотите добавить эти изменения в репозиторий, используйте команду <code>git add</code>. В противном случае используйте команду <code>git сheckout</code> для отмены изменений.</p>
+</body>
+</html>

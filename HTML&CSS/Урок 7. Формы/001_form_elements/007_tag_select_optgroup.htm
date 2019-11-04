@@ -1,0 +1,49 @@
+<!--
+    Тег <optgroup> представляет собой контейнер, внутри которого располагаются теги <option> объединенные в одну группу. Особенностью тега <optgroup> является то, что он не выделяется как обычный элемент списка, акцентируется с помощью жирного начертания, а все элементы, входящие в этот контейнер, смещаются вправо от своего исходного положения.
+-->
+
+<html>
+<head>
+    <title>Ãðóïïèðîâêà ýåìåíòîâ âûïàäàþùåãî ñïèñêà</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br />
+        Enter your first name:
+        <input type="text" name="first_name" value="Mickey" />
+        <br />
+        Enter your second name:
+        <input type="text" name="sec_name" value="Mouse" />
+        <br />
+        Enter your password:
+        <input type="password" name="password" />
+        <br />
+
+        Your favorite film:
+                <select name="select">
+                    <optgroup label="Action">
+                        <option value="film001">2 smokin guns</option>
+                        <option value="film002">Bad Boys</option>
+                        <option value="film003">Revenge</option>
+                    </optgroup>
+                    <optgroup label="Fantastic">
+                        <option value="film004">Crow</option>
+                        <option value="film005">Dead Man Walkin</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="film006">Wrong thing</option>
+                    </optgroup>
+                </select>
+
+        <br />
+        <input type="submit" name="submit" value="Enter" />
+        <br />
+        <input type="reset" name="reset" value="Reset" />
+    </form>
+</body>
+</html>
