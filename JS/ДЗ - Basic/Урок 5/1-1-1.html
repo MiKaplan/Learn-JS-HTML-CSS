@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var getFirstNum;
+        var getSecondNum;
+        var getOperand;
+
+        do {
+             getFirstNum = prompt("Enter first number");
+             getSecondNum = prompt("Enter second number");
+             getOperand = prompt("Enter +,-,*,/");
+        }
+        while (getFirstNum.match(/^\d+$/) &&
+        getSecondNum.match(/^\d+$/) &&
+        getOperand.match(/^[-,+,*,/]$/)) {
+            alert("Error");
+        };
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>

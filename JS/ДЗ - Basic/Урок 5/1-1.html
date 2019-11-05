@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function getValues() {
+            var getFirstNum = prompt("Enter first number");
+            var getSecondNum = prompt("Enter second number");
+            var getOperand = prompt("Enter +,-,*,/");
+            if ( getFirstNum == null ||
+                getSecondNum == null ||
+                getOperand == null ||
+                !getFirstNum.match(/^\d+$/) ||
+                !getSecondNum.match(/^\d+$/) ||
+                !getOperand.match(/^[-,+,*,/]$/)) {
+                alert("Error");
+                return getValues();
+            }
+
+            var calculator = {
+                sum: function (a, b) {
+                    alert(1*a + 1*b);
+                },
+                dif: function (a, b) {
+                    alert(a - b);
+                },
+                mult: function (a, b) {
+                    alert(a * b);
+                },
+                div: function (a, b) {
+                    alert(a / b);
+                }
+            };
+            if (getOperand === "+") {
+                calculator.sum(getFirstNum, getSecondNum);
+            }
+            if (getOperand === "-") {
+                calculator.dif(getFirstNum, getSecondNum);
+            }
+            if (getOperand === "*") {
+                calculator.mult(getFirstNum, getSecondNum);
+            }
+            if (getOperand === "/") {
+                calculator.div(getFirstNum, getSecondNum);
+            }
+        }
+        getValues();
+
+
+        
+
+        
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>

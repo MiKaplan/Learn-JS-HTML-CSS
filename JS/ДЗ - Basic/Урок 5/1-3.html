@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        let array = [];
+
+        function add() {
+            let addEmployee = confirm("Want to add a new employee?");
+            while (addEmployee) {
+                let employee = new Object();
+                employee.name = prompt("Enter name");
+                employee.sName = prompt("Enter surname");
+                employee.age = prompt("Enter age");
+                employee.occupation = prompt("Enter occupation");
+                array.push(employee);
+                return add();
+            }
+        }
+
+        add();
+        function addSalary(array) {
+            for (let i = 0; i <array.length; i++) {
+                if (array[i].occupation === "director") {
+                    array[i].salary = 3000;
+                } else if (array[i].occupation === "manager") {
+                    array[i].salary = 1500;
+                } else if (array[i].occupation === "programmer") {
+                    array[i].salary = 2000;
+                } else {
+                    array[i].salary = 1000;
+                }
+                array[i].show = function () {
+                    return "name: " + this.name + "\n" + 'surname: ' + this.sName + "\n" + "age: " + this.age + "\n" + "occupation: " + this.occupation +  "\n" + "salary: " + this.salary;
+                };
+            }
+
+        }
+        addSalary(array);
+
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i].show());
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
