@@ -100,13 +100,15 @@ body {
 .first {
     position: relative;
     height: 100vh;
+
     background: url(../img/truck_back5.jpg);
     background-size: cover;
+
     background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
 }
 .present {
-    position: absolute;
-    top: 30%;
     margin-top: 15px;
     margin-left: 50px;
 }

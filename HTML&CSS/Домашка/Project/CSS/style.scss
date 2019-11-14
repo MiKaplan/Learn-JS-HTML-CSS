@@ -1,0 +1,577 @@
+//null style
+@import "nullstyle.css";
+
+//gradient for navbar-backfround
+@mixin lg($fc, $sc) {
+  background: linear-gradient(to top, $fc, $sc);
+}
+
+//width and height
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+//margin from
+%mgn {
+  display: block;
+  content: "";
+  height: 65.75px;
+  margin: -65.75px 0 0;
+}
+
+%flex {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+//colors
+$color_1: rgb(234, 234, 9);
+$color_2: white;
+$color_3: rgb(199, 36, 36);
+$color_4: brown;
+$color_hover: rgb(180, 180, 180);
+
+//font-families
+$family_1: "Lobster", cursive;
+$family_2: 'Open Sans', sans-serif;
+$family_3: 'Alice', serif;
+
+$ml: 250px;
+$ml-sm: -278px;
+
+body {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#about_us:before,
+#for_costumers:before,
+#contacts:before {
+  @extend %mgn;
+}
+
+//start header
+.navbar {
+  @include lg(rgba(0, 0, 0, 0.6), rgb(0, 0, 0));
+  justify-content: space-around;
+
+  .navbar-brand {
+    font-family: $family_1;
+    font-size: 30px;
+    color: $color_1;
+
+    img {
+      @include wh(35px, 35px);
+    }
+
+    .name {
+      font-size: 30px;
+      color: $color_1;
+      margin-left: 10px;
+    }
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-family: $family_2;
+    font-size: 20px;
+    color: $color_2;
+    text-shadow: 1px 1px 2px black;
+
+    &:hover {
+      color: $color_hover !important;
+    }
+  }
+}
+
+//end header
+
+//start main
+.main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h3 {
+    font-family: $family_3;
+    font-size: 40px;
+    font-style: normal;
+    margin-top: 40px;
+    padding-left: 30px;
+    color: $color_1;
+    text-shadow: 2px 2px 2px black;
+    justify-content: flex-start;
+  }
+
+  .black {
+    height: 65.75px;
+    background: black;
+  }
+}
+
+//start first page
+.first {
+
+  background: url(../img/truck_b.jpg) left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+
+  //@media screen and (max-width: 630px) {
+  //  background: url(../img/truck_b_3.jpg);
+  //  background-size: contain;
+  //  background-repeat: no-repeat;
+  //}
+  .present {
+    float: right;
+    margin-top: 25vh;
+    margin-bottom: 40vh;
+
+    @media screen and (max-width: 750px) {
+      margin-bottom: 30vh;
+    }
+
+    @media screen and (max-width: 610px) {
+      margin-top: 15vh;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin-bottom: 15vh;
+      margin-top: 10vh;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin-bottom: 10vh;
+      margin-top: 5vh;
+    }
+
+    h3 {
+      text-align: right;
+      font-size: 100px;
+      text-shadow: 2px 2px 4px black;
+      color: $color_1;
+      font-family: $family_1;
+      margin-right: 20px;
+
+      @media screen and (max-width: 900px) {
+        font-size: 70px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 50px;
+      }
+
+      @media screen and (max-width: 370px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      text-align: right;
+      font-family: $family_3;
+      font-style: italic;
+      font-size: 50px;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      margin-top: 100px;
+      margin-right: 20px;
+
+      @media screen and (max-width: 900px) {
+        font-size: 40px;
+        margin-top: 25px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 370px) {
+        font-size: 18px;
+      }
+
+    }
+  }
+}
+
+//style for title
+
+
+//end first page
+
+//start second page
+.about_us {
+  background: #f6f6f6;
+}
+
+.content {
+  justify-content: space-around;
+  position: relative;
+  font-family: $family_3;
+  font-style: italic;
+  font-size: 18px;
+  color: #4c4c4e;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 991px) {
+    margin-left: 400px;
+  }
+
+  @media screen and (max-width: 539px) {
+    margin-left: 280px;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 15px;
+    margin-left: 180px;
+  }
+
+  .content__about {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 700px;
+
+    .experience,
+    .map,
+    .handshake,
+    .requisites {
+      @extend %flex;
+
+      @media screen and (max-width: 539px) {
+        justify-content: flex-start;
+      }
+    }
+
+    .image {
+      @include wh(100px, 100px);
+      border: 2px solid $color_3;
+      border-radius: 100%;
+      background: #f7f7f7;
+      margin-top: 40px;
+
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .experience_img img {
+      @include wh(80px, 66px);
+      margin-top: 17px;
+    }
+
+    .map_img img,
+    .handshake_img img {
+      margin-top: 18px;
+    }
+
+    .requisites_img img {
+      @include wh(64px, 64px);
+      margin-top: 18px;
+      padding-left: 7px;
+    }
+
+    .handshake_text,
+    .map_text,
+    .requisites_text,
+    .experience_text {
+      position: absolute;
+      border-bottom: 2px solid $color_3;
+      width: 400px;
+
+      @media screen and (max-width: 539px) {
+        width: 280px;
+      }
+
+      @media screen and (max-width: 420px) {
+        width: 200px;
+      }
+    }
+
+    .experience_text {
+      margin-left: -$ml;
+
+      @media screen and (max-width: 539px) {
+        margin-left: $ml-sm;
+      }
+
+      p {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 420px) {
+        margin-left: -200px;
+      }
+    }
+
+    .map_text {
+      margin-left: $ml;
+
+      @media screen and (max-width: 991px) {
+        margin-left: -$ml;
+      }
+
+      @media screen and (max-width: 539px) {
+        margin-left: $ml-sm;
+      }
+
+      @media screen and (max-width: 420px) {
+        margin-left: -200px;
+      }
+
+      p {
+        float: right;
+        width: 252px;
+
+        @media screen and (max-width: 991px) {
+          float: left;
+        }
+      }
+    }
+
+    .handshake_text {
+      margin-left: -$ml;
+
+      @media screen and (max-width: 539px) {
+        margin-left: $ml-sm;
+      }
+
+      p {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 420px) {
+        margin-left: -200px;
+      }
+    }
+
+    .requisites_text {
+      margin-left: $ml;
+
+      @media screen and (max-width: 991px) {
+        margin-left: -$ml;
+      }
+
+      @media screen and (max-width: 539px) {
+        margin-left: $ml-sm;
+      }
+
+      @media screen and (max-width: 420px) {
+        margin-left: -200px;
+      }
+
+      p {
+        float: right;
+        width: 150px;
+
+        @media screen and (max-width: 991px) {
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+//end second page
+
+//start third page
+.for_costumers {
+  position: relative;
+  background: #ffffff;
+  font-family: $family_3;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 30px;
+
+  .cont {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .insurance img {
+    @include wh(200px, 150px);
+  }
+
+  .responsibility img {
+    @include wh(120px, 150px);
+  }
+
+  .time img {
+    @include wh(300px, 150px);
+  }
+
+  .price img {
+    @include wh(220px, 150px);
+  }
+
+  .price_img {
+    @include wh(220px, 150px);
+    background: url(../img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+  }
+
+  .button {
+    margin-top: 70px;
+    height: 155px;
+
+    p {
+      font-size: 30px;
+      font-style: normal;
+      text-shadow: 1px 1px 1px black;
+      color: $color_4;
+      text-align: center;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    input {
+      @include wh(200px, 50px);
+      font-size: 25px;
+      text-shadow: 1px 1px 1px black;
+      color: white;
+      background: $color_4;
+    }
+  }
+}
+
+//end third page
+
+//start fourth page
+.contacts {
+  background: rgb(29, 29, 29);
+  font-family: $family_3;
+  font-style: italic;
+
+  .content-loc {
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 991px) {
+      margin-left: 100px;
+    }
+
+    @media screen and (max-width: 585px) {
+      margin-left: 50px;
+    }
+
+    @media screen and (max-width: 539px) {
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 420px) {
+      margin-left: 0px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .location {
+    width: 450px;
+
+    @media screen and (max-width: 539px) {
+      width: 350px;
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 300px;
+    }
+
+    p,
+    table {
+      color: white;
+      text-shadow: 1px 1px 1px black;
+      margin-top: 15px;
+      margin-left: 30px;
+      font-family: $family_2;
+      font-size: 15px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        color: $color_hover;
+      }
+    }
+
+    table:last-child {
+      margin-bottom: 30px;
+    }
+
+    span {
+      color: coral;
+    }
+
+    .fa-mobile-alt,
+    .fa-envelope-open,
+    .fa-microphone-alt {
+      color: white;
+      margin-right: 10px;
+    }
+
+    .fa-phone {
+      color: rgb(26, 158, 0);
+      margin-right: 10px;
+    }
+
+    .fa-at {
+      color: rgb(8, 223, 1);
+      margin-right: 10px;
+    }
+
+    .icon {
+      @include wh(15px, 15px);
+    }
+  }
+
+  iframe {
+    border-radius: 15px;
+
+    @media screen and (max-width: 1200px) {
+      @include wh(450px, 350px);
+    }
+
+    @media screen and (max-width: 585px) {
+      @include wh(350px, 250px);
+    }
+
+    @media screen and (max-width: 420px) {
+      @include wh(300px, 200px);
+    }
+  }
+}
+
+//end fourth page
+
+//start footer
+.footer {
+  width: 100%;
+  height: 70px;
+  background: rgb(22, 22, 22);
+
+  div {
+    justify-content: center;
+  }
+
+  p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+}

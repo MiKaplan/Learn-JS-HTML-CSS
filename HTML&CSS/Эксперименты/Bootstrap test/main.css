@@ -1,0 +1,195 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    color: black;
+}
+h3 {
+    font-weight: 400;
+}
+h2 {
+    text-align: center;
+}
+
+/*First display*/
+
+.header {
+    background: #f5f029;
+    color: black;
+    padding-top: 58px;
+}
+
+
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.menu {
+    margin-top: 10px;
+}
+
+.menu__item {
+    margin: 0px 57px;
+}
+
+.menu__item a {
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+
+.offer {
+    margin-top: 117px;
+}
+
+.offer__title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.offer__intro {
+   font-size: 20px;
+    line-height: 1.3em;
+}
+.offer__text {
+    font-size: 16px;
+}
+.icons__item {
+    margin-right: 30px;
+}
+.icons__item a {
+    color: black;
+    font-size: 42px;
+    transition: all 0.3s ease;
+}
+.icons__item a:hover {
+    text-decoration: none;
+    color: #00c8ff;
+}
+.ipad {
+    display: block;
+    margin: 60px auto;
+}
+
+/*second display*/
+
+.title {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 70px;
+
+}
+
+.title__main {
+    font-size: 32px;
+
+}
+
+.title__text {
+    font-size: 20px;
+    width: 780px;
+    margin: 0 auto;
+}
+.feature {
+    margin-bottom: 70px;
+}
+.feature__icon {
+    font-size: 50px;
+    margin-right: 37px;
+}
+
+.feature__text {
+color: grey;
+}
+
+/*third display*/
+
+.touch {
+    background: black;
+    color: white;
+}
+.yellow {
+    color: yellow;
+}
+
+.form {
+    text-align: center;
+}
+
+.form__input {
+    background: white;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 580px;
+    padding: 15px 0;
+    margin-right: 21px;
+    border: 0;
+    padding-left: 23px;
+    outline: none;
+
+}
+
+.form__btn {
+    background: yellow;
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 126px;
+    border: 0;
+    cursor: pointer;
+}
+
+/*footer*/
+.footer {
+    background: black;
+    padding: 0px 94px;
+}
+
+.credits {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    width: 184px;
+    margin: 0 auto;
+}
+
+/*media*/
+
+@media screen and (max-width: 991px) {
+    .header {
+        width: 100%;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+    .offer {
+        text-align: center;
+    }
+    .offer__text {
+       margin: 20px auto;
+        width: auto;
+    }
+    .icons {
+        justify-content: center;
+    }
+
+    .icons__item:nth-child(3){
+        margin: 0;
+    }
+}
+
