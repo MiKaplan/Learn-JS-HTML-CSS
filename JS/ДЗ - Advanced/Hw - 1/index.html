@@ -59,12 +59,10 @@
         }
         
         function deleteElem() {
-            for (let i = 0; i < list.childNodes.length; i++) {
-                if (list.childNodes[i].nodeType === 1) {
-                    var del = list.lastChild;
+
+                    var del = list.lastElementChild;
                     list.removeChild(del);
-                }
-            }
+
         }
         function createElem() {
             let newElem = document.createElement("li");
