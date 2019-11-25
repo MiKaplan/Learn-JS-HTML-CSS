@@ -1,0 +1,557 @@
+@import "nullstyle.css";
+#about_us:before,
+#for_costumers:before,
+#contacts:before {
+  display: block;
+  content: "";
+  height: 65.75px;
+  margin: -65.75px 0 0;
+}
+
+.content .content__about .experience,
+.content .content__about .map,
+.content .content__about .handshake,
+.content .content__about .requisites {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+body {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navbar {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), black);
+  justify-content: space-around;
+}
+.navbar .navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  color: #eaea09;
+}
+.navbar .navbar-brand img {
+  width: 35px;
+  height: 35px;
+}
+.navbar .navbar-brand .name {
+  font-size: 30px;
+  color: #eaea09;
+  margin-left: 10px;
+}
+.navbar .navbar-nav {
+  width: 100%;
+}
+.navbar .nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.navbar .nav-link:hover {
+  color: #b4b4b4 !important;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main h3 {
+  font-family: "Alice", serif;
+  font-size: 40px;
+  font-style: normal;
+  margin-top: 40px;
+  padding-left: 30px;
+  color: #eaea09;
+  text-shadow: 2px 2px 2px black;
+  justify-content: flex-start;
+}
+.main .black {
+  height: 65.75px;
+  background: black;
+}
+
+.no-gutter > [class*=col-] {
+  padding-right: 0;
+}
+
+.first {
+  background: url(../img/truck_b.jpg) left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+}
+.first .present {
+  float: right;
+  margin-top: 25vh;
+  margin-bottom: 40vh;
+}
+@media screen and (max-width: 750px) {
+  .first .present {
+    margin-bottom: 30vh;
+  }
+}
+@media screen and (max-width: 610px) {
+  .first .present {
+    margin-top: 15vh;
+  }
+}
+@media screen and (max-width: 550px) {
+  .first .present {
+    margin-bottom: 15vh;
+    margin-top: 10vh;
+  }
+}
+@media screen and (max-width: 430px) {
+  .first .present {
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+  }
+}
+.first .present h3 {
+  text-align: right;
+  font-size: 100px;
+  text-shadow: 2px 2px 4px black;
+  color: #eaea09;
+  font-family: "Lobster", cursive;
+  margin-right: 20px;
+}
+@media screen and (max-width: 900px) {
+  .first .present h3 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .first .present h3 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .first .present h3 {
+    font-size: 40px;
+  }
+}
+.first .present p {
+  text-align: right;
+  font-family: "Alice", serif;
+  font-style: italic;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 900px) {
+  .first .present p {
+    font-size: 40px;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .first .present p {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .first .present p {
+    font-size: 18px;
+  }
+}
+
+.about_us {
+  background: #f6f6f6;
+}
+
+.content {
+  justify-content: space-around;
+  position: relative;
+  font-family: "Alice", serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #4c4c4e;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+  .content {
+    margin-left: 400px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .content {
+    margin-left: 280px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .content {
+    font-size: 12px;
+    margin-left: 150px;
+  }
+}
+.content .content__about {
+  flex-direction: column;
+  justify-content: space-around;
+  height: 700px;
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .experience,
+.content .content__about .map,
+.content .content__about .handshake,
+.content .content__about .requisites {
+    justify-content: flex-start;
+  }
+}
+.content .content__about .image {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #c72424;
+  border-radius: 100%;
+  background: #f7f7f7;
+  margin-top: 40px;
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .image {
+    margin-top: 20px;
+  }
+}
+.content .content__about .image img {
+  display: block;
+  margin: auto;
+}
+.content .content__about .experience_img img {
+  width: 80px;
+  height: 66px;
+  margin-top: 17px;
+}
+.content .content__about .map_img img {
+  width: 64px;
+  height: 64px;
+  margin-top: 18px;
+}
+.content .content__about .handshake_img img {
+  width: 80px;
+  height: 66px;
+  margin-top: 18px;
+}
+.content .content__about .requisites_img img {
+  width: 64px;
+  height: 64px;
+  margin-top: 18px;
+  padding-left: 7px;
+}
+.content .content__about .handshake_text,
+.content .content__about .map_text,
+.content .content__about .requisites_text,
+.content .content__about .experience_text {
+  position: absolute;
+  border-bottom: 2px solid #c72424;
+  width: 400px;
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .handshake_text,
+.content .content__about .map_text,
+.content .content__about .requisites_text,
+.content .content__about .experience_text {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .handshake_text,
+.content .content__about .map_text,
+.content .content__about .requisites_text,
+.content .content__about .experience_text {
+    width: 170px;
+  }
+}
+.content .content__about .experience_text {
+  margin-left: -250px;
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .experience_text {
+    margin-left: -278px;
+  }
+}
+.content .content__about .experience_text p {
+  width: 300px;
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .experience_text {
+    margin-left: -170px;
+  }
+}
+.content .content__about .map_text {
+  margin-left: 250px;
+}
+@media screen and (max-width: 991px) {
+  .content .content__about .map_text {
+    margin-left: -250px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .map_text {
+    margin-left: -278px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .map_text {
+    margin-left: -170px;
+  }
+}
+.content .content__about .map_text p {
+  float: right;
+  width: 252px;
+}
+@media screen and (max-width: 991px) {
+  .content .content__about .map_text p {
+    float: left;
+  }
+}
+.content .content__about .handshake_text {
+  margin-left: -250px;
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .handshake_text {
+    margin-left: -278px;
+  }
+}
+.content .content__about .handshake_text p {
+  width: 300px;
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .handshake_text {
+    margin-left: -170px;
+  }
+}
+.content .content__about .requisites_text {
+  margin-left: 250px;
+}
+@media screen and (max-width: 991px) {
+  .content .content__about .requisites_text {
+    margin-left: -250px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .content .content__about .requisites_text {
+    margin-left: -278px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .content .content__about .requisites_text {
+    margin-left: -170px;
+  }
+}
+.content .content__about .requisites_text p {
+  float: right;
+  width: 150px;
+}
+@media screen and (max-width: 991px) {
+  .content .content__about .requisites_text p {
+    float: left;
+  }
+}
+
+.for_costumers {
+  position: relative;
+  background: #ffffff;
+  font-family: "Alice", serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.for_costumers .cont {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  text-align: center;
+}
+@media screen and (max-width: 420px) {
+  .for_costumers .cont {
+    margin-top: 20px;
+  }
+}
+.for_costumers .insurance img {
+  width: 200px;
+  height: 150px;
+}
+.for_costumers .responsibility img {
+  width: 120px;
+  height: 150px;
+}
+.for_costumers .time img {
+  width: 300px;
+  height: 150px;
+}
+.for_costumers .price img {
+  width: 220px;
+  height: 150px;
+}
+.for_costumers .price_img {
+  width: 220px;
+  height: 150px;
+  background: url(../img/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+}
+.for_costumers .button {
+  margin-top: 70px;
+  height: 155px;
+}
+.for_costumers .button p {
+  font-size: 30px;
+  font-style: normal;
+  text-shadow: 1px 1px 1px black;
+  color: brown;
+  text-align: center;
+}
+@media screen and (max-width: 350px) {
+  .for_costumers .button p {
+    font-size: 20px;
+  }
+}
+.for_costumers .button form {
+  text-align: center;
+}
+.for_costumers .button input {
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  background: brown;
+}
+
+.contacts {
+  background: #1d1d1d;
+  font-family: "Alice", serif;
+  font-style: italic;
+}
+.contacts .content-loc {
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+  .contacts .content-loc {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .contacts .content-loc {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .contacts .content-loc {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .contacts .content-loc {
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+}
+.contacts .location {
+  width: 450px;
+}
+@media screen and (max-width: 539px) {
+  .contacts .location {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .contacts .location {
+    width: 300px;
+  }
+}
+.contacts .location p,
+.contacts .location table {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 15px;
+  margin-left: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+.contacts .location p a,
+.contacts .location table a {
+  text-decoration: none;
+  color: white;
+}
+.contacts .location p a:hover,
+.contacts .location table a:hover {
+  color: #b4b4b4;
+}
+.contacts .location table:last-child {
+  margin-bottom: 30px;
+}
+.contacts .location span {
+  color: coral;
+}
+.contacts .location .fa-mobile-alt,
+.contacts .location .fa-envelope-open,
+.contacts .location .fa-microphone-alt {
+  color: white;
+  margin-right: 10px;
+}
+.contacts .location .fa-phone {
+  color: #1a9e00;
+  margin-right: 10px;
+}
+.contacts .location .fa-at {
+  color: #08df01;
+  margin-right: 10px;
+}
+.contacts .location .icon {
+  width: 15px;
+  height: 15px;
+}
+.contacts iframe {
+  border-radius: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .contacts iframe {
+    width: 450px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .contacts iframe {
+    width: 350px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .contacts iframe {
+    width: 290px;
+    height: 200px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  background: #161616;
+}
+.footer div {
+  justify-content: center;
+}
+.footer p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+@media screen and (max-width: 420px) {
+  .footer p {
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
