@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var team = new Object();
+        var postion = ["Junior QA engineer", "Middle QA engineer", "Porduct owner", "Senior QA engineer", "Middle developer", "Project manager", "Senior developer", "Junior developer"];
+        var names = new Array(8);
+
+        var getNames = function () {
+            var count = 8;
+            for (var i = 0; i < names.length ; i++) {
+                var name = prompt("Enter name" + "\n" + count + " names left");
+                if (name == null || name === "") {
+                    i--;
+                }
+                else {
+                    names[i] = name;
+                    count --;
+                }
+            }
+        };
+
+
+        var createTeam = function () {
+            for (var i = 0; i < 8; i++) {
+                team["user" + parseInt(i+1)] = new Object();
+                team["user" + parseInt(i+1)].name = names[i];
+                team["user" + parseInt(i+1)].position = postion[i];
+
+            }
+        };
+
+        var randomSalary = function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+
+        var setSalary = function () {
+            for (let element in team) {
+                if (team[element].position.indexOf("Junior") === 0) {
+                    team[element].salary = randomSalary(500, 1000);
+                } else if (team[element].position.indexOf("Middle") === 0) {
+                    team[element].salary = randomSalary(1500, 2000);
+                } else if (team[element].position.indexOf("Senior") === 0) {
+                    team[element].salary = randomSalary(2500, 3000);
+                } else {
+                    team[element].salary = randomSalary(4000, 4500);
+                }
+            }
+        };
+
+        getNames();
+        createTeam();
+        setSalary();
+
+       function tellAbout() {
+           for (let element in team) {
+                   team[element].tellAboutYourself = function () {
+                       console.log("Меня зовут " + team[element].name + "и я - " + team[element].position + ". Я зарабатываю " + team[element].salary + "$");
+
+               }
+           }
+       };
+
+       tellAbout();
+
+        team.showTeam = function () {
+          for (let element in team) {
+              if (element.indexOf("user") === 0) {
+                  console.log(team[element].name + " - " + team[element].position + ". Salary - " + team[element].salary);
+              }
+          }
+        };
+
+        // team.showTeam();
+
+        for (let element in team) {
+            team[element].tellAboutYourself();
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

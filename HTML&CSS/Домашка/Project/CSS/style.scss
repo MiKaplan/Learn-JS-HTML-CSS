@@ -1,7 +1,7 @@
 //null style
 @import "nullstyle.css";
 
-//gradient for navbar-backfround
+//gradient for navbar-background
 @mixin lg($fc, $sc) {
   background: linear-gradient(to top, $fc, $sc);
 }
@@ -108,11 +108,16 @@ body {
     text-shadow: 2px 2px 2px black;
     justify-content: flex-start;
   }
-
   .black {
     height: 65.75px;
     background: black;
   }
+}
+
+//no padding for col-
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+
 }
 
 //start first page
@@ -124,11 +129,6 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  //@media screen and (max-width: 630px) {
-  //  background: url(../img/truck_b_3.jpg);
-  //  background-size: contain;
-  //  background-repeat: no-repeat;
-  //}
   .present {
     float: right;
     margin-top: 25vh;
@@ -219,17 +219,17 @@ body {
   color: #4c4c4e;
   margin-bottom: 30px;
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 991px){
     margin-left: 400px;
   }
 
-  @media screen and (max-width: 539px) {
+  @media screen and (max-width: 539px){
     margin-left: 280px;
   }
 
-  @media screen and (max-width: 420px) {
-    font-size: 15px;
-    margin-left: 180px;
+  @media screen and (max-width: 420px){
+    font-size: 12px;
+    margin-left: 150px;
   }
 
   .content__about {
@@ -243,7 +243,7 @@ body {
     .requisites {
       @extend %flex;
 
-      @media screen and (max-width: 539px) {
+      @media screen and (max-width: 539px){
         justify-content: flex-start;
       }
     }
@@ -255,6 +255,9 @@ body {
       background: #f7f7f7;
       margin-top: 40px;
 
+      @media screen and (max-width: 420px) {
+        margin-top: 20px;
+      }
       img {
         display: block;
         margin: auto;
@@ -266,8 +269,13 @@ body {
       margin-top: 17px;
     }
 
-    .map_img img,
+    .map_img img {
+      @include wh(64px, 64px);
+      margin-top: 18px;
+    }
+
     .handshake_img img {
+      @include wh(80px, 66px);
       margin-top: 18px;
     }
 
@@ -290,7 +298,7 @@ body {
       }
 
       @media screen and (max-width: 420px) {
-        width: 200px;
+        width: 170px;
       }
     }
 
@@ -306,14 +314,14 @@ body {
       }
 
       @media screen and (max-width: 420px) {
-        margin-left: -200px;
+        margin-left:-170px;
       }
     }
 
     .map_text {
       margin-left: $ml;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 991px){
         margin-left: -$ml;
       }
 
@@ -322,14 +330,14 @@ body {
       }
 
       @media screen and (max-width: 420px) {
-        margin-left: -200px;
+        margin-left:-170px;
       }
 
       p {
         float: right;
         width: 252px;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 991px){
           float: left;
         }
       }
@@ -347,14 +355,14 @@ body {
       }
 
       @media screen and (max-width: 420px) {
-        margin-left: -200px;
+        margin-left:-170px;
       }
     }
 
     .requisites_text {
       margin-left: $ml;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 991px){
         margin-left: -$ml;
       }
 
@@ -363,14 +371,14 @@ body {
       }
 
       @media screen and (max-width: 420px) {
-        margin-left: -200px;
+        margin-left:-170px;
       }
 
       p {
         float: right;
         width: 150px;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 991px){
           float: left;
         }
       }
@@ -394,6 +402,10 @@ body {
     flex-wrap: wrap;
     margin-top: 100px;
     text-align: center;
+
+    @media screen and (max-width: 420px) {
+      margin-top:20px;
+    }
   }
 
   .insurance img {
@@ -431,6 +443,10 @@ body {
       text-shadow: 1px 1px 1px black;
       color: $color_4;
       text-align: center;
+
+      @media screen and (max-width: 350px){
+        font-size: 20px;
+      }
     }
 
     form {
@@ -460,22 +476,22 @@ body {
     margin-top: 50px;
     margin-bottom: 30px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 991px){
       margin-left: 100px;
     }
 
-    @media screen and (max-width: 585px) {
+    @media screen and (max-width: 585px){
       margin-left: 50px;
     }
 
     @media screen and (max-width: 539px) {
       margin-left: 10px;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     @media screen and (max-width: 420px) {
       margin-left: 0px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 
@@ -489,7 +505,6 @@ body {
     @media screen and (max-width: 420px) {
       width: 300px;
     }
-
     p,
     table {
       color: white;
@@ -508,7 +523,6 @@ body {
         color: $color_hover;
       }
     }
-
     table:last-child {
       margin-bottom: 30px;
     }
@@ -542,16 +556,16 @@ body {
   iframe {
     border-radius: 15px;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1200px){
       @include wh(450px, 350px);
     }
 
-    @media screen and (max-width: 585px) {
+    @media screen and (max-width: 585px){
       @include wh(350px, 250px);
     }
 
     @media screen and (max-width: 420px) {
-      @include wh(300px, 200px);
+      @include wh(290px, 200px);
     }
   }
 }
@@ -573,5 +587,9 @@ body {
     font-size: 15px;
     color: white;
     text-shadow: 1px 1px 2px black;
+
+    @media screen and (max-width: 420px) {
+      font-size: 11px;
+    }
   }
 }
