@@ -37,31 +37,39 @@
         }
 
         function nextElem() {
-            for (let element of list.children) {
-                    if (element.style.color === "green") {
-                        var next = element.nextElementSibling;
+            for (let i = 0; i < list.children.length; i++) {
+                if (i+1 < list.children.length) {
+                    if (list.children[i].style.color === "green") {
+                        var next = list.children[i].nextElementSibling;
                         next.style.color = "green";
-                        element.style.color = "black";
+                        list.children[i].style.color = "black";
                         break;
                     }
+                }
+
             }
         }
 
         function previousElem() {
-            for (let element of list.children) {
-                if (element.style.color === "green") {
-                    var next = element.previousElementSibling;
-                    next.style.color = "green";
-                    element.style.color = "black";
-                    break;
+            for (let i = 0; i < list.children.length; i++) {
+                if (i-1 >= 0) {
+                    if (list.children[i].style.color === "green") {
+                        var next = list.children[i].previousElementSibling;
+                        next.style.color = "green";
+                        list.children[i].style.color = "black";
+                        break;
+                    }
                 }
+
             }
         }
         
         function deleteElem() {
-
                     var del = list.lastElementChild;
-                    list.removeChild(del);
+                    if (list.children.length > 0) {
+                        list.removeChild(del);
+                    }
+
 
         }
         function createElem() {
